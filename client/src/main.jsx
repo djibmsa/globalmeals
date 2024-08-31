@@ -6,7 +6,7 @@ import Menu from "./pages/menuPage";
 import Connexion from "./components/connexion/connexion";
 import Inscription from "./components/inscription/inscription";
 import Continents from "./components/accueil/Accueil";
-import Favoris from "./components/favoris/fav";
+
 import Admin from "./components/admin/Admin";
 
 const router = createBrowserRouter([
@@ -29,10 +29,6 @@ const router = createBrowserRouter([
       {
         path: "/inscription",
         element: <Inscription />,
-      },
-      {
-        path: "/favoris",
-        element: <Favoris />,
       },
       {
         path: "/Admin",
