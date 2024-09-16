@@ -50,7 +50,7 @@ function Register() {
   };
 
   return (
-    <form onSubmit={handleSubmitForm} className="form-container">
+    <form onSubmit={handleSubmitForm} className="form-container1">
       <div className="form-group1">
         <label htmlFor="username" className="the-label1">
           Pseudo

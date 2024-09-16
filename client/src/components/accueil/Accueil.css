@@ -85,6 +85,9 @@
     width: 80%;
   }
 
+  .continents2 {
+    margin-top: 1rem;
+  }
   .europe,
   .afrique,
   .amerique,
@@ -95,23 +98,33 @@
   }
 
   .europe {
-    border: 0.6vw solid #0081c8;
+    border: 2vw solid #0081c8;
+    width: 7rem;
+    height: 7rem;
   }
 
   .afrique {
-    border: 0.6vw solid #242423;
+    border: 2vw solid #242423;
+    width: 7rem;
+    height: 7rem;
   }
 
   .amerique {
-    border: 0.6vw solid #ee334e;
+    border: 2vw solid #ee334e;
+    width: 7rem;
+    height: 7rem;
   }
 
   .asie {
-    border: 0.6vw solid #e9c46a;
+    border: 2vw solid #e9c46a;
+    width: 7rem;
+    height: 7rem;
   }
 
   .oceanie {
-    border: 1vw solid #00a651;
+    border: 2vw solid #00a651;
+    width: 7rem;
+    height: 7rem;
   }
 
   .image-container {
@@ -130,10 +143,10 @@
     transform: translate(-50%, -50%);
     margin: 0;
     padding: 5px;
-    color: black;
+    color: white;
     font-size: 4vw;
-    width: 85%;
-    background-color: rgba(255, 255, 255, 0.7);
+    width: 75%;
+    background-color: rgba(168, 84, 84, 0.693);
     text-align: center;
     border-radius: 50px;
   }
@@ -143,12 +156,12 @@
     text-decoration: none;
   }
   .new-menus {
-    font-size: 3vw;
+    font-size: 1.25rem;
     margin: 1rem;
   }
 
   .welcome-text {
-    font-size: 4vw;
+    font-size: 1.25rem;
   }
 }
 
