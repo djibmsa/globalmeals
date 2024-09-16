@@ -1,144 +1,182 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
-import { useUserContext } from "../../contexts/UserContext"; // Importer le contexte utilisateur
+import { useUserContext } from "../../contexts/UserContext";
 import "./NavbarToggle.css";
 
 export default function NavbarToggle() {
   const [dropdownOpen, setDropdownOpen] = useState(false);
-  const { user, setUser } = useUserContext(); // Utiliser le contexte utilisateur
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const { user, setUser } = useUserContext();
   const navigate = useNavigate();
-  const notifyFail = () => toast.error("Accès non autorisé, veuillez vous connecter");
+  const notifyFail = () =>
+    toast.error("Accès non autorisé, veuillez vous connecter");
 
   const { logout } = useUserContext();
 
-  const toggleDropdown = () => {
-    setDropdownOpen(!dropdownOpen);
-  };
-
-  const closeDropdown = () => {
-    setDropdownOpen(false);
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
   const handleLogout = () => {
-    // Déconnecter l'utilisateur
     setUser("");
-    logout(false)
-    navigate("/"); // Rediriger vers la page d'accueil après la déconnexion
+    logout(false);
+    navigate("/");
   };
 
-  const handleKeyDown = (e) => {
-    if (e.key === "Enter" || e.key === " ") {
-      toggleDropdown();
-    }
+  // Toggle dropdown for desktop on hover
+  const handleMouseEnter = () => {
+    setDropdownOpen(true);
+  };
+
+  const handleMouseLeave = () => {
+    setDropdownOpen(false);
   };
 
   return (
     <nav className="navbar">
-      <ul className="navbar-nav">
+      <img src="/src/assets/logo3.jpg" alt="logo" className="globalLogo" />
+
+      {/* Mobile burger menu */}
+      <div
+        className="burger"
+        onClick={toggleMobileMenu}
+        onKeyDown={(e) => {
+          if (e.key === "Enter" || e.key === " ") {
+            toggleMobileMenu();
+          }
+        }}
+        role="button"
+        tabIndex={0}
+        aria-label="Menu"
+      >
+        <div className="line" />
+        <div className="line" />
+        <div className="line" />
+      </div>
+
+      <ul className={`navbar-nav ${isMobileMenuOpen ? "mobile-show" : ""}`}>
         <li className="nav-item">
-          <Link className="nav-link active" to="/" onClick={closeDropdown}>
+          <Link
+            className="nav-link active"
+            to="/"
+            onClick={() => setIsMobileMenuOpen(false)}
+          >
             Accueil
           </Link>
         </li>
-        <li className="nav-item dropdown">
+
+        {/* Menu dropdown for desktop, burger menu for mobile */}
+        <li
+          className="nav-item dropdown"
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
+        >
           <div
             className="dropdown-toggle nav-link"
             id="navbar-dropdown"
             role="button"
-            onClick={toggleDropdown}
-            onKeyDown={handleKeyDown}
-            tabIndex={0}
           >
             Menus
           </div>
-          <ul
-            className={`dropdown-menu ${dropdownOpen === true ? "show" : ""}`}
-            aria-labelledby="navbar-dropdown"
-          >
+          <ul className={`dropdown-menu ${dropdownOpen ? "show" : ""}`}>
             <li>
               <Link
                 className="nav-dropdown"
                 to="/menuPage/europe"
-                onClick={closeDropdown}
+                onClick={() => setIsMobileMenuOpen(false)}
               >
                 Europe
               </Link>
             </li>
             <li>
               <Link
-                className={`nav-dropdown ${!user === true ? "disabled" : ""}`}
-                to={user !== true ? "/menuPage/afrique" : "#"}
-                onClick={closeDropdown}
+                className={`nav-dropdown ${!user ? "disabled" : ""}`}
+                to={!user ? "#" : "/menuPage/afrique"}
+                onClick={() => setIsMobileMenuOpen(false)}
               >
                 Afrique
               </Link>
             </li>
             <li>
               <Link
-                className={`nav-dropdown ${!user === true  ? "disabled" : ""}`}
-                to={user !== true ? "/menuPage/amerique" : "#"}
-                onClick={closeDropdown}
+                className={`nav-dropdown ${!user ? "disabled" : ""}`}
+                to={!user ? "#" : "/menuPage/amerique"}
+                onClick={() => setIsMobileMenuOpen(false)}
               >
                 Amérique
               </Link>
             </li>
             <li>
               <Link
-                className={`nav-dropdown ${!user === true  ? "disabled" : ""}`}
-                to={user !== true ? "/menuPage/asie" : "#"}
-                onClick={closeDropdown}
+                className={`nav-dropdown ${!user ? "disabled" : ""}`}
+                to={!user ? "#" : "/menuPage/asie"}
+                onClick={() => setIsMobileMenuOpen(false)}
               >
                 Asie
               </Link>
             </li>
             <li>
               <Link
-                className={`nav-dropdown ${!user === true  ? "disabled" : ""}`}
-                to={user !== true  ? "/menuPage/oceanie" : "#"}
-                onClick={closeDropdown}
+                className={`nav-dropdown ${!user ? "disabled" : ""}`}
+                to={!user ? "#" : "/menuPage/oceanie"}
+                onClick={() => setIsMobileMenuOpen(false)}
               >
                 Océanie
               </Link>
             </li>
           </ul>
         </li>
+
         <li className="nav-item">
           {user && user.role === "admin" ? (
             <Link
               to="/admin"
               className="nav-link active"
-              onClick={closeDropdown}
+              onClick={() => setIsMobileMenuOpen(false)}
             >
               Création
             </Link>
           ) : (
             <Link
-            to={user !== true ? "/favoris" : "#"}
-            className={`nav-link active ${!user === true ? "disabled" : ""}`}
-            onClick={(e) => {
-              if (!user) {
-                e.preventDefault();
-                notifyFail();
-              }
-              closeDropdown();
-            }}
-          >
-            Favoris
-          </Link>
-          
+              to={!user ? "#" : "/favoris"}
+              className={`nav-link active ${!user ? "disabled" : ""}`}
+              onClick={(e) => {
+                if (!user) {
+                  e.preventDefault();
+                  notifyFail();
+                }
+                setIsMobileMenuOpen(false);
+              }}
+              onKeyDown={(e) => {
+                if (!user) {
+                  e.preventDefault();
+                  notifyFail();
+                } else if (e.key === "Enter" || e.key === " ") {
+                  setIsMobileMenuOpen(false);
+                  // Vous pouvez déclencher la navigation manuellement si nécessaire
+                }
+              }}
+              role="link"
+              tabIndex={0} // Ensure the link is focusable via keyboard
+            >
+              Favoris
+            </Link>
           )}
         </li>
+
         <li className="nav-item">
           {user ? (
             <span
               className="nav-link active"
               onClick={handleLogout}
-              onKeyDown={(e) => {
-                if (e.key === "Enter" || e.key === " ") handleLogout();
-              }}
               role="button"
               tabIndex={0}
+              onKeyDown={(e) => {
+                if (e.key === "Enter" || e.key === " ") {
+                  handleLogout();
+                }
+              }}
             >
               Déconnexion
             </span>
@@ -146,7 +184,7 @@ export default function NavbarToggle() {
             <Link
               to="/connexion"
               className="nav-link active"
-              onClick={closeDropdown}
+              onClick={() => setIsMobileMenuOpen(false)}
             >
               Connexion
             </Link>

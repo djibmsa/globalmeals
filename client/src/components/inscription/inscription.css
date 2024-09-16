@@ -25,6 +25,11 @@
   font-size: 5Opx;
 }
 
+.nes-input {
+  width: 60vw;
+  height: 4vh;
+}
+
 #pseudo2,
 #mail2,
 #confirm-mail2,

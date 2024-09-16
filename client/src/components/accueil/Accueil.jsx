@@ -35,13 +35,17 @@ function Continents() {
           <div className={`image-container ${user === "" ? "disabled" : ""}`}>
             <img className="afrique" src={afriqueImage} alt="afrique" />
             <h2>
-              <Link to={user !== null ? "/menuPage/afrique" : "#"}>Afrique</Link>
+              <Link to={user !== null ? "/menuPage/afrique" : "#"}>
+                Afrique
+              </Link>
             </h2>
           </div>
           <div className={`image-container ${user === "" ? "disabled" : ""}`}>
             <img className="amerique" src={ameriqueImage} alt="amérique" />
             <h2>
-              <Link to={user !== null ? "/menuPage/amerique" : "#"}>Amérique</Link>
+              <Link to={user !== null ? "/menuPage/amerique" : "#"}>
+                Amérique
+              </Link>
             </h2>
           </div>
         </div>
@@ -55,7 +59,9 @@ function Continents() {
           <div className={`image-container ${user === "" ? "disabled" : ""}`}>
             <img className="oceanie" src={oceanieImage} alt="océanie" />
             <h2>
-              <Link to={user !== null ? "/menuPage/oceanie" : "#"}>Océanie</Link>
+              <Link to={user !== null ? "/menuPage/oceanie" : "#"}>
+                Océanie
+              </Link>
             </h2>
           </div>
         </div>
