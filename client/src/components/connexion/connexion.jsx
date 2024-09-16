@@ -65,19 +65,27 @@ function Login() {
     <div className="form-container">
       <form onSubmit={handleLogin}>
         <div className="form-group1">
-          <label htmlFor="mail">Adresse mail</label>
+          <label htmlFor="mail" className="the-label">
+            Adresse mail
+          </label>
           <input
-            type="mail"
+            type="email"
+            id="mail"
             name="mail"
+            className="the-input"
             value={loginInfos.mail}
             onChange={handleLoginInfos}
           />
         </div>
         <div className="form-group2">
-          <label htmlFor="password">Mot de passe</label>
+          <label htmlFor="password" className="the-label">
+            Mot de passe
+          </label>
           <input
             type="password"
+            id="password"
             name="password"
+            className="the-input"
             value={loginInfos.password}
             onChange={handleLoginInfos}
           />

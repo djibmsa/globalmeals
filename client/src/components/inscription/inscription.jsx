@@ -52,7 +52,9 @@ function Register() {
   return (
     <form onSubmit={handleSubmitForm} className="form-container">
       <div className="form-group1">
-        <label htmlFor="username">Pseudo</label>
+        <label htmlFor="username" className="the-label1">
+          Pseudo
+        </label>
         <input
           type="text"
           name="username"
@@ -62,7 +64,9 @@ function Register() {
         />
       </div>
       <div className="form-group2">
-        <label htmlFor="mail">Adresse mail</label>
+        <label htmlFor="mail" className="the-label1">
+          Adresse mail
+        </label>
         <input
           type="mail"
           name="mail"
@@ -73,7 +77,9 @@ function Register() {
       </div>
 
       <div className="form-group3">
-        <label htmlFor="password">Mot de passe</label>
+        <label htmlFor="password" className="the-label1">
+          Mot de passe
+        </label>
         <input
           type="password"
           name="password"
@@ -83,7 +89,9 @@ function Register() {
         />
       </div>
       <div className="form-group4">
-        <label htmlFor="confirmPassword">Confirmez le mot de passe</label>
+        <label htmlFor="confirmPassword" className="the-label1">
+          Confirmez le mot de passe
+        </label>
         <input
           type="password"
           name="confirmPassword"
