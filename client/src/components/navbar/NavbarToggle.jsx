@@ -35,7 +35,11 @@ export default function NavbarToggle() {
 
   return (
     <nav className="navbar">
-      <img src="/src/assets/logo3.jpg" alt="logo" className="globalLogo" />
+      <img
+        src="/src/assets/images/logoGM.png"
+        alt="logo"
+        className="globalLogo"
+      />
 
       {/* Mobile burger menu */}
       <div

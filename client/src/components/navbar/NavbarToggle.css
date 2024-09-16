@@ -128,6 +128,7 @@ li {
 @media only screen and (max-width: 720px) {
   .navbar {
     background-color: black;
+    width: 100%;
     height: 8rem;
     display: flex;
     flex-direction: row;
@@ -184,11 +185,11 @@ li {
 
   .globalLogo {
     border-radius: 20rem;
-    width: 37vw;
-    height: 17vh;
-    margin-top: -2rem;
+    width: 45vw;
+    height: 22vh;
+    margin-top: -2.25rem;
     margin-left: -2rem;
-    background-color: aliceblue;
+    background-color: transparent;
   }
   .burger {
     display: flex;
