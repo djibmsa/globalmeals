@@ -2,6 +2,8 @@
   justify-content: center;
   padding: 0;
   position: relative;
+  display: flex;
+  background-color: black;
 }
 
 .navbar-nav {
@@ -39,15 +41,13 @@
 }
 
 .nav-link.active:hover {
-  background-color: #e9c46a;
-  color: #242423;
+  color: white;
 }
 
 .dropdown-toggle {
   display: block;
   min-width: 150px;
   color: #e9c46a;
-  background-color: black;
   padding: 8px;
   border-radius: 5px;
   text-decoration: none;
@@ -59,8 +59,7 @@
 }
 
 .dropdown-toggle:hover {
-  background-color: #e9c46a;
-  color: black;
+  color: white;
 }
 
 .dropdown-menu {
@@ -185,10 +184,9 @@ li {
 
   .globalLogo {
     border-radius: 20rem;
-    width: 45vw;
-    height: 22vh;
-    margin-top: -2.25rem;
-    margin-left: -2rem;
+    width: 10rem;
+    margin-top: -1.25rem;
+    margin-left: -1rem;
     background-color: transparent;
   }
   .burger {
@@ -246,5 +244,6 @@ li {
     border-radius: 30rem;
     width: 10rem;
     margin: auto;
+    margin-left: 2rem;
   }
 }
