@@ -63,10 +63,19 @@ function Login() {
 
   return (
     <div className="form-container">
+      <div>
+        <img
+          src="src/assets/images/chickencurry.jpg"
+          alt="chicken"
+          className="chickenC"
+        />
+      </div>
       <form onSubmit={handleLogin}>
+        <h1 className="meal">GLOBAL MEALS</h1>
+        <h2 className="nect">Connexion</h2>
         <div className="form-group1">
           <label htmlFor="mail" className="the-label">
-            Adresse mail
+            Adresse email *
           </label>
           <input
             type="email"
@@ -79,7 +88,7 @@ function Login() {
         </div>
         <div className="form-group2">
           <label htmlFor="password" className="the-label">
-            Mot de passe
+            Mot de passe *
           </label>
           <input
             type="password"
@@ -92,13 +101,13 @@ function Login() {
         </div>
         <div className="back-home">
           <button type="submit" className="validate">
-            Se connecter
+            Me connecter
           </button>
         </div>
+        <Link to="/inscription" className="create">
+          <p className="count">Pas de compte?</p>{" "}
+        </Link>
       </form>
-      <Link to="/inscription" className="create">
-        <p>Créez un compte</p>{" "}
-      </Link>
     </div>
   );
 }

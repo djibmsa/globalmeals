@@ -50,60 +50,74 @@ function Register() {
   };
 
   return (
-    <form onSubmit={handleSubmitForm} className="form-container1">
-      <div className="form-group1">
-        <label htmlFor="username" className="the-label1">
-          Pseudo
-        </label>
-        <input
-          type="text"
-          name="username"
-          className="nes-input"
-          value={registerForm.username}
-          onChange={handleRegisterForm}
+    <div className="form-container2">
+      <div>
+        <img
+          src="src/assets/images/insc2.jpg"
+          alt="chicken"
+          className="betrave"
         />
       </div>
-      <div className="form-group2">
-        <label htmlFor="mail" className="the-label1">
-          Adresse mail
-        </label>
-        <input
-          type="mail"
-          name="mail"
-          className="nes-input"
-          value={registerForm.mail}
-          onChange={handleRegisterForm}
-        />
-      </div>
+      <form onSubmit={handleSubmitForm}>
+        <h1 className="meal2">GLOBAL MEALS</h1>
+        <h2 className="create-count">Créer un compte</h2>
 
-      <div className="form-group3">
-        <label htmlFor="password" className="the-label1">
-          Mot de passe
-        </label>
-        <input
-          type="password"
-          name="password"
-          className="nes-input"
-          value={registerForm.password}
-          onChange={handleRegisterForm}
-        />
-      </div>
-      <div className="form-group4">
-        <label htmlFor="confirmPassword" className="the-label1">
-          Confirmez le mot de passe
-        </label>
-        <input
-          type="password"
-          name="confirmPassword"
-          className="nes-input"
-          value={registerForm.confirmPassword}
-          onChange={handleRegisterForm}
-        />
-      </div>
-      <button type="submit" className="validate2">
-        S'enregistrer
-      </button>
-    </form>
+        <div className="formOne">
+          <label htmlFor="username" className="the-label1">
+            Pseudo *
+          </label>
+          <input
+            type="text"
+            name="username"
+            className="nes-input"
+            value={registerForm.username}
+            onChange={handleRegisterForm}
+          />
+        </div>
+        <div className="formTwo">
+          <label htmlFor="mail" className="the-label1">
+            Adresse email *
+          </label>
+          <input
+            type="mail"
+            name="mail"
+            className="nes-input"
+            value={registerForm.mail}
+            onChange={handleRegisterForm}
+          />
+        </div>
+
+        <div className="formThree">
+          <label htmlFor="password" className="the-label1">
+            Mot de passe *
+          </label>
+          <input
+            type="password"
+            name="password"
+            className="nes-input"
+            value={registerForm.password}
+            onChange={handleRegisterForm}
+          />
+        </div>
+        <div className="formFor">
+          <label htmlFor="confirmPassword" className="the-label1">
+            Confirmez le mot de passe *
+          </label>
+          <input
+            type="password"
+            name="confirmPassword"
+            className="nes-input"
+            value={registerForm.confirmPassword}
+            onChange={handleRegisterForm}
+          />
+        </div>
+        <div className="back-home2">
+          <button type="submit" className="validate2">
+            M'enregistrer
+          </button>
+        </div>
+      </form>
+    </div>
   );
 }
 
