@@ -1,249 +1,331 @@
+/* Styles de la barre de navigation principale */
 .navbar {
-  justify-content: center;
-  padding: 0;
-  position: relative;
-  display: flex;
-  background-color: black;
+  justify-content: center; /* Centre les éléments horizontalement */
+  padding: 0; /* Supprime les espacements internes */
+  position: relative; /* Position relative pour permettre le positionnement absolu des éléments enfants */
+  display: flex; /* Utilise Flexbox pour la disposition des éléments */
+  background-color: black; /* Définit le fond de la navbar en noir */
 }
 
+/* Styles pour le conteneur de navigation */
 .navbar-nav {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  gap: 3px;
+  display: flex; /* Utilise Flexbox pour disposer les éléments en ligne */
+  justify-content: center; /* Centre les éléments horizontalement */
+  align-items: center; /* Centre les éléments verticalement */
+  list-style: none; /* Supprime les puces de la liste */
+  margin: 0; /* Supprime les marges externes */
+  padding: 0; /* Supprime les espacements internes */
+  gap: 3px; /* Ajoute un petit espace entre les éléments */
 }
 
+/* Styles pour chaque élément de navigation */
 .nav-item {
-  margin: 0 10px;
-  position: relative;
+  margin: 0 10px; /* Ajoute une marge horizontale de 10px de chaque côté */
+  position: relative; /* Position relative pour permettre le positionnement absolu des sous-menus */
 }
 
+/* Styles pour les liens de navigation */
 .nav-link {
-  display: block;
-  min-width: 150px;
-  color: #e9c46a;
-  background-color: black;
-  padding: 8px;
-  border-radius: 5px;
-  text-decoration: none;
-  text-align: center;
+  display: block; /* Affiche le lien comme un bloc */
+  min-width: 150px; /* Définit une largeur minimale de 150px */
+  color: #e9c46a; /* Couleur du texte dorée */
+  background-color: black; /* Fond noir */
+  padding: 8px; /* Ajoute un padding de 8px tout autour */
+  border-radius: 5px; /* Bordures arrondies de 5px */
+  text-decoration: none; /* Supprime la décoration du texte (soulignement) */
+  text-align: center; /* Centre le texte horizontalement */
   transition:
     background-color 0.3s,
-    color 0.3s;
+    /* Transition douce pour le changement de couleur de fond */ color 0.3s; /* Transition douce pour le changement de couleur de texte */
 }
 
+/* Styles pour le lien de navigation actif */
 .nav-link.active {
-  background-color: black;
-  color: #e9c46a;
+  background-color: black; /* Fond noir (peut être redondant si identique au non-actif) */
+  color: #e9c46a; /* Couleur du texte dorée */
 }
 
+/* Styles pour le lien de navigation actif au survol */
 .nav-link.active:hover {
-  color: white;
+  color: white; /* Change la couleur du texte en blanc au survol */
 }
 
+/* Styles pour le bouton de dropdown */
 .dropdown-toggle {
-  display: block;
-  min-width: 150px;
-  color: #e9c46a;
-  padding: 8px;
-  border-radius: 5px;
-  text-decoration: none;
-  text-align: center;
+  display: block; /* Affiche le toggle comme un bloc */
+  min-width: 150px; /* Largeur minimale de 150px */
+  color: #e9c46a; /* Couleur du texte dorée */
+  padding: 8px; /* Padding de 8px */
+  border-radius: 5px; /* Bordures arrondies de 5px */
+  text-decoration: none; /* Supprime la décoration du texte */
+  text-align: center; /* Centre le texte */
   transition:
     background-color 0.3s,
-    color 0.3s;
-  cursor: pointer;
+    /* Transition pour la couleur de fond */ color 0.3s; /* Transition pour la couleur du texte */
+  cursor: pointer; /* Change le curseur en pointeur pour indiquer l'interactivité */
 }
 
+/* Styles pour le toggle au survol */
 .dropdown-toggle:hover {
-  color: white;
+  color: white; /* Change la couleur du texte en blanc au survol */
 }
 
+/* Styles pour le menu déroulant */
 .dropdown-menu {
-  display: none;
-  position: absolute;
-  z-index: 1;
-  top: 100%;
-  left: 0;
-  min-width: 150px;
-  background-color: black;
-  padding: 10px 0;
-  border-radius: 5px;
+  display: none; /* Masque le menu par défaut */
+  position: absolute; /* Positionne le menu absolument par rapport à son parent */
+  z-index: 1; /* Assure que le menu est au-dessus des autres éléments */
+  top: 100%; /* Positionne le menu juste en dessous du parent */
+  left: 0; /* Aligne le menu à gauche du parent */
+  min-width: 150px; /* Largeur minimale de 150px */
+  background-color: black; /* Fond noir */
+  padding: 10px 0; /* Padding vertical de 10px */
+  border-radius: 5px; /* Bordures arrondies de 5px */
 }
 
+/* Styles pour les liens dans le menu déroulant */
 .nav-dropdown {
-  color: #e9c46a;
-  text-decoration: none;
-  padding: 10px;
-  display: block;
+  color: #e9c46a; /* Couleur du texte dorée */
+  text-decoration: none; /* Supprime la décoration du texte */
+  padding: 10px; /* Padding de 10px */
+  display: block; /* Affiche le lien comme un bloc */
 }
 
+/* Styles pour les liens du dropdown au survol */
 .nav-dropdown:hover {
-  background-color: #e9c46a;
-  color: #242423;
+  background-color: #e9c46a; /* Change le fond en doré au survol */
+  color: #242423; /* Change la couleur du texte en gris foncé */
 }
 
+/* Affiche le menu déroulant lorsqu'il a la classe 'show' */
 .dropdown-menu.show {
-  display: block;
+  display: block; /* Affiche le menu */
 }
 
+/* Supprime les puces de toutes les listes */
 li {
-  list-style: none;
+  list-style: none; /* Supprime les puces */
 }
 
+/* Styles pour les dropdowns désactivés */
 .nav-dropdown.disabled {
-  pointer-events: none;
-  color: grey;
+  pointer-events: none; /* Désactive les interactions de la souris */
+  color: grey; /* Change la couleur du texte en gris */
 }
 
+/* Styles pour le menu mobile lorsqu'il est affiché */
 .navbar-nav.mobile-show {
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  top: 54px;
-  left: 14rem;
-  width: 50%;
-  background-color: black;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 20px 0;
+  display: flex; /* Utilise Flexbox */
+  flex-direction: column; /* Dispose les éléments en colonne */
+  position: absolute; /* Position absolue */
+  top: 54px; /* Positionné à 54px du haut */
+  left: 14rem; /* Positionné à 14rem de la gauche */
+  width: 50%; /* Largeur de 50% de l'écran */
+  background-color: black; /* Fond noir */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Ombre portée pour effet de profondeur */
+  padding: 20px 0; /* Padding vertical de 20px */
 }
 
+/* Styles pour les éléments de navigation en mode mobile */
 .navbar-nav.mobile-show .nav-item {
-  text-align: center;
-  margin: 10px 0;
+  text-align: center; /* Centre le texte */
+  margin: 10px 0; /* Ajoute une marge verticale de 10px */
 }
 
+/* Styles pour les liens et dropdowns en mode mobile */
 .navbar-nav.mobile-show .nav-link,
 .navbar-nav.mobile-show .nav-dropdown {
-  width: 100%;
-  padding: 15px;
-  font-size: 1.2rem;
+  width: 100%; /* Largeur complète */
+  padding: 15px; /* Padding de 15px */
+  font-size: 1.2rem; /* Taille de police augmentée */
 }
 
 /* Media queries */
-@media only screen and (max-width: 720px) {
+
+/* Media query pour les tablettes (écrans entre 721px et 1024px) */
+@media screen and (min-width: 721px) and (max-width: 1024px) {
   .navbar {
-    background-color: black;
-    width: 100%;
-    height: 8rem;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    background-color: black; /* Fond noir */
+    width: 100%; /* Largeur complète */
+    height: 8rem; /* Hauteur de 8rem */
+    display: flex; /* Utilise Flexbox */
+    flex-direction: row; /* Dispose les éléments en ligne */
+    justify-content: space-between; /* Espace entre les éléments */
+    padding: 0 2rem; /* Padding horizontal de 2rem pour espacer les éléments */
   }
 
-  /* Burger menu styles */
-  .burger {
-    cursor: pointer;
-    height: 1.25rem;
-    margin: 2rem 1rem 0 0;
-    min-width: 1.5rem;
-    position: relative;
-    transform: rotate(0deg);
-    transition: transform 0.5s ease-in-out;
-    width: 1.5rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-
-  .burger .line {
-    width: 100%;
-    height: 3px;
-    background-color: #e9c46a;
-    border-radius: 10px;
-    transition: all 0.3s ease-in-out;
-  }
-
-  .burger .line:nth-child(1) {
-    transform-origin: top left;
-  }
-
-  .burger .line:nth-child(2) {
-    opacity: 1;
-  }
-
-  .burger .line:nth-child(3) {
-    transform-origin: bottom left;
-  }
-
-  /* Transition en version ouverte (croix) */
-  .burger.open .line:nth-child(1) {
-    transform: rotate(45deg);
-  }
-
-  .burger.open .line:nth-child(2) {
-    opacity: 0;
-  }
-
-  .burger.open .line:nth-child(3) {
-    transform: rotate(-45deg);
-  }
-
+  /* Ajustement du logo pour tablette */
   .globalLogo {
-    border-radius: 20rem;
-    width: 10rem;
-    margin-top: -1.25rem;
-    margin-left: -1rem;
-    background-color: transparent;
+    width: 8rem; /* Réduit la taille du logo à 8rem */
+    margin: auto; /* Centre le logo verticalement */
+    margin-left: 2rem; /* Ajoute une marge à gauche de 2rem */
   }
+
+  /* Ajustement du bouton burger pour tablette */
   .burger {
-    display: flex;
+    height: 1.5rem; /* Augmente la hauteur du burger à 1.5rem */
+    width: 2rem; /* Augmente la largeur du burger à 2rem */
+    margin: 2rem 2rem 0 0; /* Ajuste la marge autour du burger */
   }
 
-  .navbar-nav {
-    display: none;
-  }
-
-  .navbar-nav.mobile-show {
-    display: flex;
-    flex-direction: column;
-    position: fixed; /* Change 'absolute' to 'fixed' for better positioning over other elements */
-    top: 60px;
-    width: 50%;
-    height: 50%; /* Full height for the overlay effect */
-    background-color: black;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    padding-right: 2rem;
-    margin-left: -2rem;
-    z-index: 999; /* Make sure this is higher than other elements */
-  }
-
-  .nav-item {
-    margin: 10px 0;
-    font-size: small;
-  }
-
+  /* Ajustement des liens de navigation pour tablette */
   .nav-link {
-    min-width: 10px;
-    width: 80vw;
+    min-width: 100px; /* Réduit la largeur minimale à 100px */
+    font-size: 1rem; /* Ajuste la taille de la police à 1rem */
+    padding: 10px; /* Augmente le padding à 10px */
   }
 
-  .nav-dropdown {
-    padding: 10px;
+  /* Espacement des éléments de navigation pour tablette */
+  .nav-item {
+    margin: 0 15px; /* Ajoute une marge horizontale de 15px */
+  }
+
+  /* Ajustement du menu déroulant pour tablette */
+  .dropdown-menu {
+    position: absolute; /* Position absolue */
+    top: 3rem; /* Positionné à 3rem du haut */
+    left: 0; /* Aligné à gauche */
+    min-width: 180px; /* Largeur minimale de 180px */
+    background-color: black; /* Fond noir */
+    padding: 10px 0; /* Padding vertical de 10px */
+    border-radius: 5px; /* Bordures arrondies de 5px */
   }
 }
 
+/* Media query pour les appareils mobiles (écrans jusqu'à 720px) */
+@media only screen and (max-width: 720px) {
+  .navbar {
+    background-color: black; /* Fond noir */
+    width: 100%; /* Largeur complète */
+    height: 8rem; /* Hauteur de 8rem */
+    display: flex; /* Utilise Flexbox */
+    flex-direction: row; /* Dispose les éléments en ligne */
+    justify-content: space-between; /* Espace entre les éléments */
+  }
+
+  /* Styles pour le menu burger en mode mobile */
+  .burger {
+    cursor: pointer; /* Curseur en forme de pointeur */
+    height: 1.25rem; /* Hauteur de 1.25rem */
+    margin: 2rem 1rem 0 0; /* Marges : 2rem en haut, 1rem à droite, 0 en bas et à gauche */
+    min-width: 1.5rem; /* Largeur minimale de 1.5rem */
+    position: relative; /* Position relative */
+    transform: rotate(0deg); /* Pas de rotation initiale */
+    transition: transform 0.5s ease-in-out; /* Transition douce pour la rotation */
+    width: 1.5rem; /* Largeur de 1.5rem */
+    display: flex; /* Utilise Flexbox */
+    flex-direction: column; /* Dispose les lignes en colonne */
+    justify-content: space-between; /* Espace entre les lignes */
+  }
+
+  /* Styles pour les lignes du burger */
+  .burger .line {
+    width: 100%; /* Largeur complète */
+    height: 3px; /* Hauteur de 3px */
+    background-color: #e9c46a; /* Couleur dorée */
+    border-radius: 10px; /* Bordures arrondies de 10px */
+    transition: all 0.3s ease-in-out; /* Transition douce pour toutes les propriétés */
+  }
+
+  /* Origine de transformation pour la première ligne du burger */
+  .burger .line:nth-child(1) {
+    transform-origin: top left; /* Origine en haut à gauche */
+  }
+
+  /* Opacité pour la deuxième ligne du burger */
+  .burger .line:nth-child(2) {
+    opacity: 1; /* Opacité complète */
+  }
+
+  /* Origine de transformation pour la troisième ligne du burger */
+  .burger .line:nth-child(3) {
+    transform-origin: bottom left; /* Origine en bas à gauche */
+  }
+
+  /* Styles lorsque le burger est ouvert (transformation en croix) */
+  .burger.open .line:nth-child(1) {
+    transform: rotate(45deg); /* Rotate la première ligne de 45 degrés */
+  }
+
+  .burger.open .line:nth-child(2) {
+    opacity: 0; /* Cache la deuxième ligne en la rendant transparente */
+  }
+
+  .burger.open .line:nth-child(3) {
+    transform: rotate(-45deg); /* Rotate la troisième ligne de -45 degrés */
+  }
+
+  /* Styles pour le logo global en mode mobile */
+  .globalLogo {
+    border-radius: 20rem; /* Bordures très arrondies pour un cercle parfait */
+    width: 10rem; /* Largeur de 10rem */
+    margin-top: -1.25rem; /* Marge supérieure négative pour ajuster la position */
+    margin-left: -1rem; /* Marge gauche négative pour ajuster la position */
+    background-color: transparent; /* Fond transparent */
+  }
+
+  .burger {
+    display: flex; /* Affiche le burger */
+  }
+
+  /* Cache le menu de navigation par défaut en mode mobile */
+  .navbar-nav {
+    display: none; /* Masque le menu de navigation */
+  }
+
+  /* Styles pour le menu de navigation mobile lorsqu'il est affiché */
+  .navbar-nav.mobile-show {
+    display: flex; /* Affiche le menu en flexbox */
+    flex-direction: column; /* Dispose les éléments en colonne */
+    position: fixed; /* Position fixe pour qu'il reste en place lors du défilement */
+    top: 60px; /* Positionné à 60px du haut */
+    width: 50%; /* Largeur de 50% de l'écran */
+    height: 50%; /* Hauteur de 50% de l'écran pour un effet d'overlay */
+    background-color: black; /* Fond noir */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Ombre portée pour effet de profondeur */
+    padding-right: 2rem; /* Padding à droite de 2rem */
+    margin-left: -2rem; /* Marge gauche négative de 2rem */
+    z-index: 999; /* Assure que le menu est au-dessus des autres éléments */
+  }
+
+  /* Styles pour les éléments de navigation en mode mobile */
+  .nav-item {
+    margin: 10px 0; /* Ajoute une marge verticale de 10px */
+    font-size: small; /* Taille de police réduite */
+  }
+
+  /* Styles pour les liens de navigation en mode mobile */
+  .nav-link {
+    min-width: 10px; /* Largeur minimale de 10px */
+    width: 80vw; /* Largeur de 80% de la vue */
+  }
+
+  /* Styles pour les dropdowns en mode mobile */
+  .nav-dropdown {
+    padding: 10px; /* Padding de 10px */
+  }
+}
+
+/* Media query pour les écrans à partir de 720px (probablement pour les tablettes et plus grands) */
 @media screen and (min-width: 720px) {
   .navbar-nav {
-    flex-direction: row;
-    margin-top: 1rem;
+    flex-direction: row; /* Dispose les éléments en ligne */
+    margin-top: 1rem; /* Ajoute une marge supérieure de 1rem */
   }
 
   .nav-item {
-    width: auto;
-    height: auto;
+    width: auto; /* Largeur automatique */
+    height: auto; /* Hauteur automatique */
   }
 
+  /* Styles pour le logo global sur écrans plus larges */
   .globalLogo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 30rem;
-    width: 10rem;
-    margin: auto;
-    margin-left: 2rem;
+    display: flex; /* Utilise Flexbox */
+    justify-content: center; /* Centre horizontalement */
+    align-items: center; /* Centre verticalement */
+    border-radius: 30rem; /* Bordures très arrondies pour un cercle parfait */
+    width: 10rem; /* Largeur de 10rem */
+    margin: auto; /* Centre le logo */
+    margin-left: 2rem; /* Ajoute une marge à gauche de 2rem */
   }
 }

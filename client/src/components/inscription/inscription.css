@@ -160,7 +160,7 @@ p {
   /* Image à gauche */
   .betrave {
     width: 60vw; /* L'image occupe 50% de la largeur */
-    height: 100vh;
+    height: 102vh;
     display: block; /* L'image est visible sur les écrans larges */
     background-image: url("/src/assets/images/betrave.jpg");
     background-size: cover;

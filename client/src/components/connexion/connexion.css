@@ -80,10 +80,10 @@ p {
 .chickenC {
   display: none;
 }
-@media only screen and (max-width: 720px) {
+@media only screen and (min-width: 1024px) {
 }
 
-@media screen and (min-width: 721px) and (max-width: 1024px) {
+@media screen and (min-width: 721px) and (max-width: 1023px) {
   .form-container {
     display: flex;
     flex-direction: row;
@@ -150,6 +150,11 @@ p {
     padding-left: 1rem;
     margin-left: 4rem;
     margin-left: 2rem;
+  }
+
+  .betrave {
+    width: 40vw;
+    height: 100%;
   }
 
   .meal {
