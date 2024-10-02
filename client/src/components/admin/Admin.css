@@ -1,65 +1,65 @@
 .create-menu {
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 10px;
-  max-width: auto;
-  margin: 20px auto;
+  background-color: #fff; /* Sets the background color of the create menu to white */
+  padding: 20px; /* Adds 20 pixels of padding inside the create menu */
+  border-radius: 10px; /* Rounds the corners of the create menu with a radius of 10 pixels */
+  max-width: auto; /* Sets the maximum width of the create menu; 'auto' means no maximum limit (this property can be omitted as it doesn't apply in this context) */
+  margin: 20px auto; /* Centers the create menu horizontally with 20 pixels of margin above and below */
 }
 
 .create-menu h1,
 .create-menu h2 {
-  text-align: center;
-  color: #333;
+  text-align: center; /* Centers the text for both h1 and h2 headings */
+  color: #333; /* Sets the text color to a dark gray */
 }
 
 .create-menu form {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 20px;
+  display: flex; /* Uses flexbox layout for the form */
+  flex-direction: column; /* Arranges form elements in a column */
+  margin-bottom: 20px; /* Adds 20 pixels of margin below the form */
 }
 
 .create-menu select,
 .create-menu textarea {
-  padding: 10px;
-  margin-bottom: 10px;
-  border-radius: 5px;
-  width: 100%;
-  box-sizing: border-box;
+  padding: 10px; /* Adds 10 pixels of padding inside select and textarea elements */
+  margin-bottom: 10px; /* Adds 10 pixels of margin below select and textarea elements */
+  border-radius: 5px; /* Rounds the corners of select and textarea elements with a radius of 5 pixels */
+  width: 100%; /* Sets the width of select and textarea elements to 100% of their parent container */
+  box-sizing: border-box; /* Ensures padding and border are included in the total width and height */
 }
 
 .create-menu select {
-  height: 40px;
+  height: 40px; /* Sets a fixed height of 40 pixels for select elements */
 }
 
 .create-menu textarea {
-  min-height: 40px;
-  resize: none;
-  overflow: hidden;
+  min-height: 40px; /* Sets a minimum height of 40 pixels for textarea elements */
+  resize: none; /* Disables the ability to resize the textarea */
+  overflow: hidden; /* Hides any overflow content within the textarea */
 }
 
 .create-menu button {
-  display: block;
-  min-width: 100px;
-  color: #e9c46a;
-  background-color: #242423;
-  padding: 5px;
-  border-radius: 5px;
-  text-decoration: none;
-  text-align: center;
-  transition:
+  display: block; /* Makes the button a block-level element */
+  min-width: 100px; /* Sets a minimum width of 100 pixels for the button */
+  color: #e9c46a; /* Sets the text color of the button to a light yellow */
+  background-color: #242423; /* Sets the background color of the button to a dark gray */
+  padding: 5px; /* Adds 5 pixels of padding inside the button */
+  border-radius: 5px; /* Rounds the corners of the button with a radius of 5 pixels */
+  text-decoration: none; /* Removes any text decoration (like underlining) from the button */
+  text-align: center; /* Centers the text within the button */
+  transition: /* Smooth transition effects for the following properties */
     background-color 0.3s,
-    color 0.3s;
-  cursor: pointer;
-  margin: 0 auto;
+    /* Transition for background color over 0.3 seconds */ color 0.3s; /* Transition for text color over 0.3 seconds */
+  cursor: pointer; /* Changes the cursor to a pointer when hovering over the button */
+  margin: 0 auto; /* Centers the button horizontally by setting automatic margins on the left and right */
 }
 
 .create-menu button:hover {
-  background-color: #e9c46a;
-  color: #242423;
+  background-color: #e9c46a; /* Changes the background color of the button to light yellow when hovered */
+  color: #242423; /* Changes the text color of the button to dark gray when hovered */
 }
 
 @media screen and (min-width: 1000px) {
   .create-menu {
-    max-width: 75%;
+    max-width: 75%; /* Sets the maximum width of the create menu to 75% of the parent container on screens wider than 1000 pixels */
   }
 }

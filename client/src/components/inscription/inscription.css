@@ -1,201 +1,208 @@
 .form-container2 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  background-image: url("/src/assets/images/betrave.jpg");
-  background-size: cover;
-  background-position: center;
-  height: 100%;
-  margin-top: 1rem;
+  display: flex; /* Uses flexbox layout for the container */
+  justify-content: center; /* Centers flex items horizontally */
+  align-items: center; /* Centers flex items vertically */
+  flex-direction: column; /* Stacks items vertically */
+  background-image: url("/src/assets/images/betrave.jpg"); /* Sets background image for the container */
+  background-size: cover; /* Ensures background image covers the entire container */
+  background-position: center; /* Centers the background image */
+  height: 100%; /* Sets the height of the container to 100% of its parent */
+  margin-top: 1rem; /* Adds a top margin of 1rem */
 }
 
 .the-label1 {
-  color: black; /* Correction de 'balck' à 'black' */
-  padding: 0.3rem;
-  border-radius: 0.5rem;
-  font-size: 1.25rem;
+  color: black; /* Sets the text color to black (corrected from 'balck' to 'black') */
+  padding: 0.3rem; /* Adds padding around the label */
+  border-radius: 0.5rem; /* Rounds the corners of the label */
+  font-size: 1.25rem; /* Sets font size for the label */
 }
 
 .formOne,
 .formTwo,
 .formThree,
 .formFor {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  margin-bottom: 2rem;
-  margin-top: 2rem;
+  display: flex; /* Uses flexbox layout for these form elements */
+  justify-content: center; /* Centers flex items horizontally */
+  align-items: center; /* Centers flex items vertically */
+  flex-direction: column; /* Stacks items vertically */
+  margin-bottom: 2rem; /* Adds a bottom margin of 2rem */
+  margin-top: 2rem; /* Adds a top margin of 2rem */
 }
 
 .nes-input {
-  width: 60vw;
-  height: 4vh;
-  border-radius: 0.45rem;
-  background-color: rgba(128, 128, 128, 0.159);
+  width: 60vw; /* Sets the input width to 60% of the viewport width */
+  height: 4vh; /* Sets the input height to 4% of the viewport height */
+  border-radius: 0.45rem; /* Rounds the corners of the input */
+  background-color: rgba(
+    128,
+    128,
+    128,
+    0.159
+  ); /* Sets a light gray background with transparency */
 }
 
 p {
-  display: flex;
-  justify-content: left;
-  font-size: 1.25rem;
+  display: flex; /* Uses flexbox layout for paragraphs */
+  justify-content: left; /* Aligns text to the left */
+  font-size: 1.25rem; /* Sets font size for paragraphs */
 }
 
 .back-home2 {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 2rem;
-  text-decoration: none;
+  display: flex; /* Uses flexbox layout for this element */
+  justify-content: center; /* Centers flex items horizontally */
+  margin-bottom: 2rem; /* Adds a bottom margin of 2rem */
+  text-decoration: none; /* Removes underline from links */
 }
 
 .validate2 {
-  display: block;
-  min-width: 100px;
-  color: #e9c46a;
-  background-color: #242423;
-  padding: 5px;
-  border-radius: 5px;
-  text-align: center;
-  transition:
+  display: block; /* Makes the button a block-level element */
+  min-width: 100px; /* Sets a minimum width of 100px for the button */
+  color: #e9c46a; /* Sets the text color to a light yellow */
+  background-color: #242423; /* Sets the background color to a dark gray */
+  padding: 5px; /* Adds padding inside the button */
+  border-radius: 5px; /* Rounds the corners of the button */
+  text-align: center; /* Centers text inside the button */
+  transition: /* Applies transition effects for hover states */
     background-color 0.3s,
-    color 0.3s;
-  cursor: pointer;
-  font-size: 1.25rem;
+    /* Changes background color over 0.3 seconds */ color 0.3s; /* Changes text color over 0.3 seconds */
+  cursor: pointer; /* Changes cursor to pointer when hovering over the button */
+  font-size: 1.25rem; /* Sets font size for the button */
 }
 .validate2:hover {
-  background-color: #e9c46a;
-  color: #242423;
+  background-color: #e9c46a; /* Changes background color on hover to light yellow */
+  color: #242423; /* Changes text color on hover to dark gray */
 }
 
 .betrave {
-  display: none; /* L'image à gauche sera visible en version desktop uniquement */
-  margin-left: -5rem;
+  display: none; /* Hides the image on screens smaller than desktop */
+  margin-left: -5rem; /* Adds a negative left margin to adjust positioning */
 }
 .create-count {
-  text-decoration: underline;
+  text-decoration: underline; /* Underlines the text */
 }
 
 @media only screen and (max-width: 720px) {
   .form-container2 {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-size: cover;
-    background-position: center;
-    height: 70vh; /* Pour que l'image couvre toute la hauteur de l'écran */
-    margin-top: 3rem;
+    display: flex; /* Uses flexbox layout for mobile */
+    flex-direction: column; /* Stacks items vertically */
+    justify-content: center; /* Centers items vertically */
+    align-items: center; /* Centers items horizontally */
+    background-size: cover; /* Ensures background image covers the container */
+    background-position: center; /* Centers the background image */
+    height: 70vh; /* Sets height to 70% of the viewport height */
+    margin-top: 3rem; /* Adds a top margin of 3rem */
   }
 }
 @media screen and (min-width: 721px) and (max-width: 1024px) {
   .form-container2 {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 2rem;
-    background-image: url("/src/assets/images/betrave.jpg");
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
+    display: flex; /* Uses flexbox layout for tablets */
+    flex-direction: column; /* Stacks items vertically */
+    justify-content: center; /* Centers items vertically */
+    align-items: center; /* Centers items horizontally */
+    padding: 2rem; /* Adds padding inside the container */
+    background-image: url("/src/assets/images/betrave.jpg"); /* Sets background image for tablets */
+    background-size: cover; /* Ensures background image covers the container */
+    background-position: center; /* Centers the background image */
+    height: 100vh; /* Sets height to 100% of the viewport height */
   }
 
   .nes-input {
-    width: 50vw; /* Ajuste la largeur du champ d'entrée pour tablettes */
-    height: 5vh; /* Légèrement plus grand pour une meilleure interaction sur tablette */
+    width: 50vw; /* Adjusts input width for tablets to 50% of viewport width */
+    height: 5vh; /* Increases input height for better interaction */
   }
 
   .the-label1 {
-    font-size: 1.25rem; /* Taille de texte adaptée pour la tablette */
-    color: #333; /* Utilisation d'un texte plus lisible */
+    font-size: 1.25rem; /* Sets font size for labels on tablets */
+    color: #333; /* Uses a darker color for better readability */
   }
 
   .validate2 {
-    font-size: 1.1rem;
-    padding: 8px;
-    min-width: 120px; /* Un peu plus grand pour les boutons sur tablette */
+    font-size: 1.1rem; /* Adjusts font size of the button on tablets */
+    padding: 8px; /* Increases padding inside the button */
+    min-width: 120px; /* Sets minimum width for the button on tablets */
   }
 
   .formOne,
   .formTwo,
   .formThree,
   .formFor {
-    margin-bottom: 1.5rem;
-    margin-top: 1.5rem;
-    justify-content: center;
+    margin-bottom: 1.5rem; /* Adjusts bottom margin for form elements */
+    margin-top: 1.5rem; /* Adjusts top margin for form elements */
+    justify-content: center; /* Centers items vertically */
   }
 
   .back-home2 {
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.5rem; /* Adjusts bottom margin for back home link */
   }
 
   p {
-    font-size: 1.15rem; /* Taille du texte légèrement plus petite que sur desktop */
+    font-size: 1.15rem; /* Adjusts font size for paragraphs on tablets */
   }
 
-  /* Si une image ou autre élément a besoin d'être ajusté pour les tablettes */
   .betrave {
-    width: 60vw;
-    height: 100vh; /* Image occupe la moitié de la hauteur */
-    margin: 0 auto;
+    width: 60vw; /* Sets image width for tablets to 60% of viewport width */
+    height: 100vh; /* Sets image height for tablets to fill viewport height */
+    margin: 0 auto; /* Centers the image horizontally */
   }
 }
 
 @media screen and (min-width: 720px) {
   .form-container2 {
-    display: flex;
-    justify-content: space-evenly;
-    flex-direction: row;
-    height: 90vh; /* Assurez-vous que l'image et le formulaire occupent toute la hauteur */
-    background-image: none; /* Pas d'image en fond pour la version desktop */
-    margin-left: -5rem;
+    display: flex; /* Uses flexbox layout for larger screens */
+    justify-content: space-evenly; /* Distributes space evenly between items */
+    flex-direction: row; /* Arranges items in a row */
+    height: 90vh; /* Sets height to 90% of the viewport height */
+    background-image: none; /* Removes background image for desktop version */
+    margin-left: -5rem; /* Adds a negative left margin to adjust positioning */
   }
 
-  /* Image à gauche */
   .betrave {
-    width: 60vw; /* L'image occupe 50% de la largeur */
-    height: 102vh;
-    display: block; /* L'image est visible sur les écrans larges */
-    background-image: url("/src/assets/images/betrave.jpg");
-    background-size: cover;
-    background-position: left;
+    width: 60vw; /* Sets image width for desktop to 60% of viewport width */
+    height: 102vh; /* Sets image height for desktop */
+    display: block; /* Makes the image visible on larger screens */
+    background-image: url("/src/assets/images/betrave.jpg"); /* Sets background image for the element */
+    background-size: cover; /* Ensures background image covers the element */
+    background-position: left; /* Aligns background image to the left */
   }
 
-  /* Formulaire à droite */
   .form-container2 .form-content {
-    width: 40%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    margin-right: 5%; /* Espace à droite */
+    width: 40%; /* Sets width of the form content to 40% of the container */
+    display: flex; /* Uses flexbox layout for form content */
+    flex-direction: column; /* Stacks items vertically */
+    justify-content: center; /* Centers items vertically */
+    align-items: flex-start; /* Aligns items to the start (left) */
+    margin-right: 5%; /* Adds a right margin for spacing */
   }
 
   .nes-input {
-    width: 23vw;
-    height: 4vh;
-    background-color: rgba(128, 128, 128, 0.32);
-    border-radius: 0.45rem;
+    width: 23vw; /* Sets input width for desktop to 23% of viewport width */
+    height: 4vh; /* Sets input height for desktop */
+    background-color: rgba(
+      128,
+      128,
+      128,
+      0.32
+    ); /* Sets a slightly darker gray background */
+    border-radius: 0.45rem; /* Rounds the corners of the input */
   }
 
   .the-label1 {
-    background-color: transparent;
-    color: black;
-    font-size: 1rem;
-    display: flex;
-    justify-content: flex-start;
+    background-color: transparent; /* Sets background color to transparent */
+    color: black; /* Sets text color to black */
+    font-size: 1rem; /* Sets font size for labels */
+    display: flex; /* Uses flexbox layout for labels */
+    justify-content: flex-start; /* Aligns label text to the left */
   }
 
   .validate2 {
-    font-size: 1rem;
+    font-size: 1rem; /* Sets font size for the button */
   }
 
   .create-count {
-    text-decoration: underline;
-    padding-right: 9rem;
-    margin-top: 3rem;
-    margin-bottom: 3rem;
-    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: underline; /* Underlines the text */
+    padding-right: 9rem; /* Adds right padding for spacing */
+    margin-top: 3rem; /* Adds top margin for spacing */
+    margin-bottom: 3rem; /* Adds bottom margin for spacing */
+    font-family: Arial, Helvetica, sans-serif; /* Sets font family for text */
   }
 }

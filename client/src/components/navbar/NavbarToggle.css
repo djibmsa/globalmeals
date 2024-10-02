@@ -1,331 +1,246 @@
-/* Styles de la barre de navigation principale */
+/* Styles for the main navigation bar */
 .navbar {
-  justify-content: center; /* Centre les éléments horizontalement */
-  padding: 0; /* Supprime les espacements internes */
-  position: relative; /* Position relative pour permettre le positionnement absolu des éléments enfants */
-  display: flex; /* Utilise Flexbox pour la disposition des éléments */
-  background-color: black; /* Définit le fond de la navbar en noir */
+  justify-content: center; /* Centers the elements horizontally within the navbar */
+  padding: 0; /* Removes internal spacing around the navbar */
+  position: relative; /* Sets a relative position for child elements to position absolutely */
+  display: flex; /* Uses Flexbox layout for arranging elements */
+  background-color: black; /* Sets the background color of the navbar to black */
 }
 
-/* Styles pour le conteneur de navigation */
+/* Styles for the navigation container */
 .navbar-nav {
-  display: flex; /* Utilise Flexbox pour disposer les éléments en ligne */
-  justify-content: center; /* Centre les éléments horizontalement */
-  align-items: center; /* Centre les éléments verticalement */
-  list-style: none; /* Supprime les puces de la liste */
-  margin: 0; /* Supprime les marges externes */
-  padding: 0; /* Supprime les espacements internes */
-  gap: 3px; /* Ajoute un petit espace entre les éléments */
+  display: flex; /* Uses Flexbox to arrange navigation items in a row */
+  justify-content: center; /* Centers the items horizontally */
+  align-items: center; /* Centers the items vertically */
+  list-style: none; /* Removes bullet points from the list */
+  margin: 0; /* Removes external margins */
+  padding: 0; /* Removes internal padding */
+  gap: 3px; /* Adds a small gap between navigation items */
 }
 
-/* Styles pour chaque élément de navigation */
+/* Styles for each navigation item */
 .nav-item {
-  margin: 0 10px; /* Ajoute une marge horizontale de 10px de chaque côté */
-  position: relative; /* Position relative pour permettre le positionnement absolu des sous-menus */
+  margin: 0 10px; /* Adds a horizontal margin of 10px on each side */
+  position: relative; /* Sets a relative position for dropdown menus to position absolutely */
 }
 
-/* Styles pour les liens de navigation */
+/* Styles for navigation links */
 .nav-link {
-  display: block; /* Affiche le lien comme un bloc */
-  min-width: 150px; /* Définit une largeur minimale de 150px */
-  color: #e9c46a; /* Couleur du texte dorée */
-  background-color: black; /* Fond noir */
-  padding: 8px; /* Ajoute un padding de 8px tout autour */
-  border-radius: 5px; /* Bordures arrondies de 5px */
-  text-decoration: none; /* Supprime la décoration du texte (soulignement) */
-  text-align: center; /* Centre le texte horizontalement */
+  display: block; /* Displays the link as a block element */
+  min-width: 150px; /* Sets a minimum width of 150px for the link */
+  color: #e9c46a; /* Sets the text color to a golden shade */
+  background-color: black; /* Sets the background color to black */
+  padding: 8px; /* Adds 8px of padding around the link */
+  border-radius: 5px; /* Rounds the corners with a radius of 5px */
+  text-decoration: none; /* Removes underline from the text */
+  text-align: center; /* Centers the text horizontally */
   transition:
     background-color 0.3s,
-    /* Transition douce pour le changement de couleur de fond */ color 0.3s; /* Transition douce pour le changement de couleur de texte */
+    /* Smooth transition for background color change */ color 0.3s; /* Smooth transition for text color change */
 }
 
-/* Styles pour le lien de navigation actif */
+/* Styles for the active navigation link */
 .nav-link.active {
-  background-color: black; /* Fond noir (peut être redondant si identique au non-actif) */
-  color: #e9c46a; /* Couleur du texte dorée */
+  background-color: black; /* Sets the background color to black (can be redundant) */
+  color: #e9c46a; /* Sets the text color to a golden shade */
 }
 
-/* Styles pour le lien de navigation actif au survol */
+/* Styles for the active link on hover */
 .nav-link.active:hover {
-  color: white; /* Change la couleur du texte en blanc au survol */
+  color: white; /* Changes the text color to white on hover */
 }
 
-/* Styles pour le bouton de dropdown */
+/* Styles for the dropdown toggle button */
 .dropdown-toggle {
-  display: block; /* Affiche le toggle comme un bloc */
-  min-width: 150px; /* Largeur minimale de 150px */
-  color: #e9c46a; /* Couleur du texte dorée */
-  padding: 8px; /* Padding de 8px */
-  border-radius: 5px; /* Bordures arrondies de 5px */
-  text-decoration: none; /* Supprime la décoration du texte */
-  text-align: center; /* Centre le texte */
+  display: block; /* Displays the toggle as a block element */
+  min-width: 150px; /* Sets a minimum width of 150px */
+  color: #e9c46a; /* Sets the text color to a golden shade */
+  padding: 8px; /* Adds 8px of padding around the toggle */
+  border-radius: 5px; /* Rounds the corners with a radius of 5px */
+  text-decoration: none; /* Removes underline from the text */
+  text-align: center; /* Centers the text */
   transition:
     background-color 0.3s,
-    /* Transition pour la couleur de fond */ color 0.3s; /* Transition pour la couleur du texte */
-  cursor: pointer; /* Change le curseur en pointeur pour indiquer l'interactivité */
+    /* Smooth transition for background color change */ color 0.3s; /* Smooth transition for text color change */
+  cursor: pointer; /* Changes cursor to pointer to indicate interactivity */
 }
 
-/* Styles pour le toggle au survol */
+/* Styles for the dropdown toggle on hover */
 .dropdown-toggle:hover {
-  color: white; /* Change la couleur du texte en blanc au survol */
+  color: white; /* Changes the text color to white on hover */
 }
 
-/* Styles pour le menu déroulant */
+/* Styles for the dropdown menu */
 .dropdown-menu {
-  display: none; /* Masque le menu par défaut */
-  position: absolute; /* Positionne le menu absolument par rapport à son parent */
-  z-index: 1; /* Assure que le menu est au-dessus des autres éléments */
-  top: 100%; /* Positionne le menu juste en dessous du parent */
-  left: 0; /* Aligne le menu à gauche du parent */
-  min-width: 150px; /* Largeur minimale de 150px */
-  background-color: black; /* Fond noir */
-  padding: 10px 0; /* Padding vertical de 10px */
-  border-radius: 5px; /* Bordures arrondies de 5px */
+  display: none; /* Hides the dropdown menu by default */
+  position: absolute; /* Positions the dropdown absolutely relative to its parent */
+  z-index: 1; /* Ensures the dropdown appears above other elements */
+  top: 100%; /* Positions the dropdown just below the parent */
+  left: 0; /* Aligns the dropdown to the left of the parent */
+  min-width: 150px; /* Sets a minimum width of 150px for the dropdown */
+  background-color: black; /* Sets the background color of the dropdown to black */
+  padding: 10px 0; /* Adds 10px vertical padding */
+  border-radius: 5px; /* Rounds the corners with a radius of 5px */
 }
 
-/* Styles pour les liens dans le menu déroulant */
+/* Styles for links inside the dropdown menu */
 .nav-dropdown {
-  color: #e9c46a; /* Couleur du texte dorée */
-  text-decoration: none; /* Supprime la décoration du texte */
-  padding: 10px; /* Padding de 10px */
-  display: block; /* Affiche le lien comme un bloc */
+  color: #e9c46a; /* Sets the text color to a golden shade */
+  text-decoration: none; /* Removes underline from the text */
+  padding: 10px; /* Adds 10px of padding around the link */
+  display: block; /* Displays the link as a block element */
 }
 
-/* Styles pour les liens du dropdown au survol */
+/* Styles for dropdown links on hover */
 .nav-dropdown:hover {
-  background-color: #e9c46a; /* Change le fond en doré au survol */
-  color: #242423; /* Change la couleur du texte en gris foncé */
+  background-color: #e9c46a; /* Changes background color to golden on hover */
+  color: #242423; /* Changes text color to dark gray on hover */
 }
 
-/* Affiche le menu déroulant lorsqu'il a la classe 'show' */
+/* Shows the dropdown menu when it has the 'show' class */
 .dropdown-menu.show {
-  display: block; /* Affiche le menu */
+  display: block; /* Displays the dropdown menu */
 }
 
-/* Supprime les puces de toutes les listes */
+/* Removes bullet points from all lists */
 li {
-  list-style: none; /* Supprime les puces */
+  list-style: none; /* Hides bullet points */
 }
 
-/* Styles pour les dropdowns désactivés */
+/* Styles for disabled dropdowns */
 .nav-dropdown.disabled {
-  pointer-events: none; /* Désactive les interactions de la souris */
-  color: grey; /* Change la couleur du texte en gris */
+  pointer-events: none; /* Disables mouse interactions */
+  color: grey; /* Changes text color to gray */
 }
 
-/* Styles pour le menu mobile lorsqu'il est affiché */
+/* Styles for the mobile menu when displayed */
 .navbar-nav.mobile-show {
-  display: flex; /* Utilise Flexbox */
-  flex-direction: column; /* Dispose les éléments en colonne */
-  position: absolute; /* Position absolue */
-  top: 54px; /* Positionné à 54px du haut */
-  left: 14rem; /* Positionné à 14rem de la gauche */
-  width: 50%; /* Largeur de 50% de l'écran */
-  background-color: black; /* Fond noir */
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Ombre portée pour effet de profondeur */
-  padding: 20px 0; /* Padding vertical de 20px */
+  display: flex; /* Uses Flexbox to arrange elements */
+  flex-direction: column; /* Arranges elements in a column */
+  position: absolute; /* Positions the menu absolutely */
+  top: 54px; /* Positions the menu 54px from the top */
+  left: 14rem; /* Positions the menu 14rem from the left */
+  width: 50%; /* Sets the width to 50% of the screen */
+  background-color: black; /* Sets the background color to black */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Adds shadow for depth effect */
+  padding: 20px 0; /* Adds vertical padding of 20px */
 }
 
-/* Styles pour les éléments de navigation en mode mobile */
+/* Styles for navigation items in mobile view */
 .navbar-nav.mobile-show .nav-item {
-  text-align: center; /* Centre le texte */
-  margin: 10px 0; /* Ajoute une marge verticale de 10px */
+  text-align: center; /* Centers text in mobile view */
+  margin: 10px 0; /* Adds vertical margin of 10px */
 }
 
-/* Styles pour les liens et dropdowns en mode mobile */
+/* Styles for links and dropdowns in mobile view */
 .navbar-nav.mobile-show .nav-link,
 .navbar-nav.mobile-show .nav-dropdown {
-  width: 100%; /* Largeur complète */
-  padding: 15px; /* Padding de 15px */
-  font-size: 1.2rem; /* Taille de police augmentée */
+  width: 100%; /* Sets width to 100% */
+  padding: 15px; /* Adds 15px of padding */
+  font-size: 1.2rem; /* Increases font size */
 }
 
 /* Media queries */
 
-/* Media query pour les tablettes (écrans entre 721px et 1024px) */
+/* Media query for tablets (screens between 721px and 1024px) */
 @media screen and (min-width: 721px) and (max-width: 1024px) {
   .navbar {
-    background-color: black; /* Fond noir */
-    width: 100%; /* Largeur complète */
-    height: 8rem; /* Hauteur de 8rem */
-    display: flex; /* Utilise Flexbox */
-    flex-direction: row; /* Dispose les éléments en ligne */
-    justify-content: space-between; /* Espace entre les éléments */
-    padding: 0 2rem; /* Padding horizontal de 2rem pour espacer les éléments */
+    background-color: black; /* Sets background color to black */
+    width: 100%; /* Sets width to full */
+    height: 8rem; /* Sets height to 8rem */
+    display: flex; /* Uses Flexbox layout */
+    flex-direction: row; /* Arranges items in a row */
+    justify-content: space-between; /* Adds space between elements */
+    padding: 0 2rem; /* Adds 2rem horizontal padding */
   }
 
-  /* Ajustement du logo pour tablette */
+  /* Adjusts the logo size for tablets */
   .globalLogo {
-    width: 8rem; /* Réduit la taille du logo à 8rem */
-    margin: auto; /* Centre le logo verticalement */
-    margin-left: 2rem; /* Ajoute une marge à gauche de 2rem */
+    width: 8rem; /* Sets logo width to 8rem */
+    margin: auto; /* Centers logo vertically */
+    margin-left: 2rem; /* Adds left margin of 2rem */
   }
 
-  /* Ajustement du bouton burger pour tablette */
+  /* Adjusts the burger button size for tablets */
   .burger {
-    height: 1.5rem; /* Augmente la hauteur du burger à 1.5rem */
-    width: 2rem; /* Augmente la largeur du burger à 2rem */
-    margin: 2rem 2rem 0 0; /* Ajuste la marge autour du burger */
+    height: 1.5rem; /* Sets burger height to 1.5rem */
+    width: 2rem; /* Sets burger width to 2rem */
+    margin: 2rem 2rem 0 0; /* Adjusts margin around burger */
   }
 
-  /* Ajustement des liens de navigation pour tablette */
+  /* Adjusts the navigation links for tablets */
   .nav-link {
-    min-width: 100px; /* Réduit la largeur minimale à 100px */
-    font-size: 1rem; /* Ajuste la taille de la police à 1rem */
-    padding: 10px; /* Augmente le padding à 10px */
+    min-width: 100px; /* Sets minimum width to 100px */
+    font-size: 1rem; /* Sets font size to 1rem */
+    padding: 10px; /* Adds 10px of padding */
   }
 
-  /* Espacement des éléments de navigation pour tablette */
+  /* Adjusts margin for navigation items on tablets */
   .nav-item {
-    margin: 0 15px; /* Ajoute une marge horizontale de 15px */
+    margin: 0 15px; /* Adds horizontal margin of 15px */
   }
 
-  /* Ajustement du menu déroulant pour tablette */
+  /* Adjusts dropdown menu for tablets */
   .dropdown-menu {
-    position: absolute; /* Position absolue */
-    top: 3rem; /* Positionné à 3rem du haut */
-    left: 0; /* Aligné à gauche */
-    min-width: 180px; /* Largeur minimale de 180px */
-    background-color: black; /* Fond noir */
-    padding: 10px 0; /* Padding vertical de 10px */
-    border-radius: 5px; /* Bordures arrondies de 5px */
+    position: absolute; /* Sets dropdown to absolute positioning */
+    top: 3rem; /* Positions it 3rem from the top */
+    left: 0; /* Aligns dropdown to the left */
+    min-width: 180px; /* Sets minimum width to 180px */
+    background-color: black; /* Sets background color to black */
+    padding: 10px 0; /* Adds vertical padding of 10px */
+    border-radius: 5px; /* Rounds corners with a radius of 5px */
   }
 }
 
-/* Media query pour les appareils mobiles (écrans jusqu'à 720px) */
+/* Media query for mobile devices (screens up to 720px) */
 @media only screen and (max-width: 720px) {
   .navbar {
-    background-color: black; /* Fond noir */
-    width: 100%; /* Largeur complète */
-    height: 8rem; /* Hauteur de 8rem */
-    display: flex; /* Utilise Flexbox */
-    flex-direction: row; /* Dispose les éléments en ligne */
-    justify-content: space-between; /* Espace entre les éléments */
+    background-color: black; /* Sets background color to black */
+    width: 100%; /* Sets width to full */
+    height: 8rem; /* Sets height to 8rem */
+    display: flex; /* Uses Flexbox layout */
+    flex-direction: row; /* Arranges items in a row */
+    justify-content: space-between; /* Adds space between elements */
   }
 
-  /* Styles pour le menu burger en mode mobile */
+  /* Styles for the burger menu in mobile view */
   .burger {
-    cursor: pointer; /* Curseur en forme de pointeur */
-    height: 1.25rem; /* Hauteur de 1.25rem */
-    margin: 2rem 1rem 0 0; /* Marges : 2rem en haut, 1rem à droite, 0 en bas et à gauche */
-    min-width: 1.5rem; /* Largeur minimale de 1.5rem */
-    position: relative; /* Position relative */
-    transform: rotate(0deg); /* Pas de rotation initiale */
-    transition: transform 0.5s ease-in-out; /* Transition douce pour la rotation */
-    width: 1.5rem; /* Largeur de 1.5rem */
-    display: flex; /* Utilise Flexbox */
-    flex-direction: column; /* Dispose les lignes en colonne */
-    justify-content: space-between; /* Espace entre les lignes */
+    height: 1.5rem; /* Sets burger height to 1.5rem */
+    width: 2rem; /* Sets burger width to 2rem */
+    margin: 2rem; /* Adds margin of 2rem */
   }
 
-  /* Styles pour les lignes du burger */
-  .burger .line {
-    width: 100%; /* Largeur complète */
-    height: 3px; /* Hauteur de 3px */
-    background-color: #e9c46a; /* Couleur dorée */
-    border-radius: 10px; /* Bordures arrondies de 10px */
-    transition: all 0.3s ease-in-out; /* Transition douce pour toutes les propriétés */
-  }
-
-  /* Origine de transformation pour la première ligne du burger */
-  .burger .line:nth-child(1) {
-    transform-origin: top left; /* Origine en haut à gauche */
-  }
-
-  /* Opacité pour la deuxième ligne du burger */
-  .burger .line:nth-child(2) {
-    opacity: 1; /* Opacité complète */
-  }
-
-  /* Origine de transformation pour la troisième ligne du burger */
-  .burger .line:nth-child(3) {
-    transform-origin: bottom left; /* Origine en bas à gauche */
-  }
-
-  /* Styles lorsque le burger est ouvert (transformation en croix) */
-  .burger.open .line:nth-child(1) {
-    transform: rotate(45deg); /* Rotate la première ligne de 45 degrés */
-  }
-
-  .burger.open .line:nth-child(2) {
-    opacity: 0; /* Cache la deuxième ligne en la rendant transparente */
-  }
-
-  .burger.open .line:nth-child(3) {
-    transform: rotate(-45deg); /* Rotate la troisième ligne de -45 degrés */
-  }
-
-  /* Styles pour le logo global en mode mobile */
+  /* Adjusts logo size for mobile view */
   .globalLogo {
-    border-radius: 20rem; /* Bordures très arrondies pour un cercle parfait */
-    width: 10rem; /* Largeur de 10rem */
-    margin-top: -1.25rem; /* Marge supérieure négative pour ajuster la position */
-    margin-left: -1rem; /* Marge gauche négative pour ajuster la position */
-    background-color: transparent; /* Fond transparent */
+    width: 6rem; /* Sets logo width to 6rem */
+    margin: auto; /* Centers logo vertically */
   }
 
-  .burger {
-    display: flex; /* Affiche le burger */
-  }
-
-  /* Cache le menu de navigation par défaut en mode mobile */
-  .navbar-nav {
-    display: none; /* Masque le menu de navigation */
-  }
-
-  /* Styles pour le menu de navigation mobile lorsqu'il est affiché */
-  .navbar-nav.mobile-show {
-    display: flex; /* Affiche le menu en flexbox */
-    flex-direction: column; /* Dispose les éléments en colonne */
-    position: fixed; /* Position fixe pour qu'il reste en place lors du défilement */
-    top: 60px; /* Positionné à 60px du haut */
-    width: 50%; /* Largeur de 50% de l'écran */
-    height: 50%; /* Hauteur de 50% de l'écran pour un effet d'overlay */
-    background-color: black; /* Fond noir */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Ombre portée pour effet de profondeur */
-    padding-right: 2rem; /* Padding à droite de 2rem */
-    margin-left: -2rem; /* Marge gauche négative de 2rem */
-    z-index: 999; /* Assure que le menu est au-dessus des autres éléments */
-  }
-
-  /* Styles pour les éléments de navigation en mode mobile */
-  .nav-item {
-    margin: 10px 0; /* Ajoute une marge verticale de 10px */
-    font-size: small; /* Taille de police réduite */
-  }
-
-  /* Styles pour les liens de navigation en mode mobile */
+  /* Adjusts navigation link styles for mobile view */
   .nav-link {
-    min-width: 10px; /* Largeur minimale de 10px */
-    width: 80vw; /* Largeur de 80% de la vue */
+    min-width: 100px; /* Sets minimum width to 100px */
+    font-size: 1rem; /* Sets font size to 1rem */
+    padding: 8px; /* Adds 8px of padding */
   }
 
-  /* Styles pour les dropdowns en mode mobile */
-  .nav-dropdown {
-    padding: 10px; /* Padding de 10px */
-  }
-}
-
-/* Media query pour les écrans à partir de 720px (probablement pour les tablettes et plus grands) */
-@media screen and (min-width: 720px) {
-  .navbar-nav {
-    flex-direction: row; /* Dispose les éléments en ligne */
-    margin-top: 1rem; /* Ajoute une marge supérieure de 1rem */
-  }
-
+  /* Adjusts navigation item margins for mobile view */
   .nav-item {
-    width: auto; /* Largeur automatique */
-    height: auto; /* Hauteur automatique */
+    margin: 0 5px; /* Adds horizontal margin of 5px */
   }
 
-  /* Styles pour le logo global sur écrans plus larges */
-  .globalLogo {
-    display: flex; /* Utilise Flexbox */
-    justify-content: center; /* Centre horizontalement */
-    align-items: center; /* Centre verticalement */
-    border-radius: 30rem; /* Bordures très arrondies pour un cercle parfait */
-    width: 10rem; /* Largeur de 10rem */
-    margin: auto; /* Centre le logo */
-    margin-left: 2rem; /* Ajoute une marge à gauche de 2rem */
+  /* Adjusts dropdown menu styles for mobile view */
+  .dropdown-menu {
+    position: absolute; /* Sets dropdown to absolute positioning */
+    top: 3rem; /* Positions it 3rem from the top */
+    left: 0; /* Aligns dropdown to the left */
+    min-width: 100px; /* Sets minimum width to 100px */
+    background-color: black; /* Sets background color to black */
+    padding: 10px 0; /* Adds vertical padding of 10px */
+    border-radius: 5px; /* Rounds corners with a radius of 5px */
+  }
+
+  /* Hides the navbar items when in mobile view */
+  .navbar-nav {
+    display: none; /* Hides navigation items */
   }
 }

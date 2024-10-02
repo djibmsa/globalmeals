@@ -1,220 +1,291 @@
+/* Styles for underlined text, likely for links or important information */
 .nect {
-  text-decoration: underline;
+  text-decoration: underline; /* Underlines the text */
 }
+
+/* Container for the form, styled with flexbox for alignment */
 .form-container {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  flex-direction: column;
-  background-size: cover;
-  background-position: center;
-  height: 70%;
+  display: flex; /* Enables flexbox layout */
+  justify-content: space-evenly; /* Distributes items evenly with space around them */
+  align-items: center; /* Centers items vertically */
+  flex-direction: column; /* Stacks items in a column on small screens */
+  background-size: cover; /* Ensures background image covers the entire container */
+  background-position: center; /* Centers the background image */
+  height: 70%; /* Sets the height of the container */
 }
 
+/* Styles for labels in the form */
 .the-label {
-  color: black;
-  padding: 0.3rem;
-  border-radius: 0.5rem;
-  font-size: 1.25rem;
+  color: black; /* Sets the text color to black */
+  padding: 0.3rem; /* Adds padding around the label */
+  border-radius: 0.5rem; /* Rounds the corners of the label */
+  font-size: 1.25rem; /* Sets the font size */
 }
 
+/* Flex container for the first and second groups of form elements */
 .form-group1,
 .form-group2 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  margin-bottom: 2rem;
-  margin-top: 2rem;
+  display: flex; /* Enables flexbox layout */
+  justify-content: center; /* Centers items horizontally */
+  align-items: center; /* Centers items vertically */
+  flex-direction: column; /* Stacks items vertically */
+  margin-bottom: 2rem; /* Adds space below the group */
+  margin-top: 2rem; /* Adds space above the group */
 }
 
+/* Styles for input fields in the form */
 .the-input {
-  width: 60vw;
-  height: 4vh;
-  border-radius: 0.45rem;
-  background-color: rgba(128, 128, 128, 0.178);
+  width: 60vw; /* Sets the input width to 60% of the viewport width */
+  height: 4vh; /* Sets the input height to 4% of the viewport height */
+  border-radius: 0.45rem; /* Rounds the corners of the input */
+  background-color: rgba(
+    128,
+    128,
+    128,
+    0.178
+  ); /* Sets a light gray background color */
 }
 
+/* Styles for paragraph elements */
 p {
-  display: flex;
-  justify-content: left;
-  font-size: 1.25rem;
-  color: black;
+  display: flex; /* Enables flexbox layout */
+  justify-content: left; /* Aligns text to the left */
+  font-size: 1.25rem; /* Sets the font size */
+  color: black; /* Sets the text color to black */
 }
 
+/* Styles for the link that goes back to the home page */
 .back-home {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 2rem;
-  text-decoration: none;
+  display: flex; /* Enables flexbox layout */
+  justify-content: center; /* Centers the link horizontally */
+  margin-bottom: 2rem; /* Adds space below the link */
+  text-decoration: none; /* Removes underline from the link */
 }
+
+/* Styles for validation buttons */
 .validate {
-  display: block;
-  min-width: 100px;
-  color: #e9c46a;
-  background-color: #242423;
-  padding: 5px;
-  border-radius: 5px;
-  text-align: center;
-  transition:
+  display: block; /* Makes the button a block-level element */
+  min-width: 100px; /* Sets a minimum width for the button */
+  color: #e9c46a; /* Sets the text color */
+  background-color: #242423; /* Sets the background color */
+  padding: 5px; /* Adds padding around the button */
+  border-radius: 5px; /* Rounds the corners of the button */
+  text-align: center; /* Centers text within the button */
+  transition: /* Adds a transition effect on hover */
     background-color 0.3s,
-    color 0.3s;
-  cursor: pointer;
-  font-size: 1.25rem;
+    /* Smooth transition for background color */ color 0.3s; /* Smooth transition for text color */
+  cursor: pointer; /* Changes cursor to pointer on hover */
+  font-size: 1.25rem; /* Sets the font size */
 }
 
+/* Hover effect for validation buttons */
 .validate:hover {
-  background-color: #e9c46a;
-  color: #242423;
+  background-color: #e9c46a; /* Changes background color on hover */
+  color: #242423; /* Changes text color on hover */
 }
 
+/* Styles for create links or buttons */
 .create {
-  color: white;
-  background-color: rgba(168, 84, 84, 0.593);
-  text-decoration: none;
-}
-.chickenC {
-  display: none;
-}
-@media only screen and (min-width: 1024px) {
+  color: white; /* Sets text color to white */
+  background-color: rgba(
+    168,
+    84,
+    84,
+    0.593
+  ); /* Sets a semi-transparent red background */
 }
 
+/* Styles for the chickenC element; hidden by default */
+.chickenC {
+  display: none; /* Hides the element */
+}
+
+/* Media query for larger screens (min-width: 1024px) */
+@media only screen and (min-width: 1024px) {
+  /* Add styles here for larger screens if needed */
+}
+
+/* Media query for tablets (between 721px and 1023px) */
 @media screen and (min-width: 721px) and (max-width: 1023px) {
   .form-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    padding: 2rem;
-    background-image: url("/src/assets/images/chickencurry.jpg");
-    background-size: cover;
-    background-position: center;
-    height: 100vh; /* S'assure que l'image couvre toute la hauteur de l'écran */
+    display: flex; /* Enables flexbox layout */
+    flex-direction: row; /* Aligns items in a row */
+    justify-content: space-around; /* Distributes items with space around them */
+    align-items: center; /* Centers items vertically */
+    padding: 2rem; /* Adds padding around the container */
+    background-image: url("/src/assets/images/chickencurry.jpg"); /* Sets a background image */
+    background-size: cover; /* Ensures the background image covers the container */
+    background-position: center; /* Centers the background image */
+    height: 100vh; /* Sets height to cover the entire viewport */
   }
 
   .chickenC {
-    width: 50vw; /* Ajuste la taille de l'image pour tablettes */
-    height: 100vh;
-    display: block;
-    background-image: url("/src/assets/images/chickencurry.jpg");
-    background-size: cover;
-    background-position: center;
+    width: 50vw; /* Sets the width of the chickenC element to 50% of the viewport width */
+    height: 100vh; /* Sets the height to cover the entire viewport */
+    display: block; /* Displays the element */
+    background-image: url("/src/assets/images/chickencurry.jpg"); /* Sets a background image */
+    background-size: cover; /* Ensures the background image covers the element */
+    background-position: center; /* Centers the background image */
   }
 
   .form-group1,
   .form-group2 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin-bottom: 1.5rem; /* Ajustement des marges pour tablettes */
-    margin-top: 1.5rem;
+    display: flex; /* Enables flexbox layout */
+    justify-content: center; /* Centers items horizontally */
+    align-items: center; /* Centers items vertically */
+    flex-direction: column; /* Stacks items vertically */
+    margin-bottom: 1.5rem; /* Adjusts bottom margin for better spacing */
+    margin-top: 1.5rem; /* Adjusts top margin for better spacing */
   }
 
   .the-input {
-    width: 40vw; /* Ajuste la largeur des inputs pour tablettes */
-    height: 5vh;
-    background-color: rgba(128, 128, 128, 0.32);
-    border-radius: 0.45rem;
+    width: 40vw; /* Sets input width to 40% of the viewport width for tablets */
+    height: 5vh; /* Sets input height to 5% of the viewport height */
+    background-color: rgba(
+      128,
+      128,
+      128,
+      0.32
+    ); /* Sets a lighter gray background */
+    border-radius: 0.45rem; /* Rounds the corners of the input */
   }
 
   .the-label {
-    background-color: rgba(168, 84, 84, 0.593);
-    color: white;
-    font-size: 1.25rem; /* Taille de texte plus adaptée pour tablettes */
-    display: flex;
-    justify-content: flex-start;
+    background-color: rgba(
+      168,
+      84,
+      84,
+      0.593
+    ); /* Sets a semi-transparent red background */
+    color: white; /* Sets the text color to white */
+    font-size: 1.25rem; /* Sets a larger font size for readability */
+    display: flex; /* Enables flexbox layout */
+    justify-content: flex-start; /* Aligns text to the left */
   }
 
   .validate {
-    font-size: 1.15rem; /* Légère augmentation de la taille du texte pour tablettes */
-    padding: 10px;
+    font-size: 1.15rem; /* Slightly increases font size for tablets */
+    padding: 10px; /* Increases padding around the button */
   }
 
   .create {
-    background-color: rgba(168, 84, 84, 0.593);
-    font-size: 1.15rem;
+    background-color: rgba(
+      168,
+      84,
+      84,
+      0.593
+    ); /* Sets a semi-transparent red background */
+    font-size: 1.15rem; /* Slightly increases font size for create buttons */
   }
 
   .count {
-    color: white;
-    background-color: rgba(168, 84, 84, 0.593);
-    border-radius: 0.45rem;
-    width: 40vw;
-    height: 5vh;
-    padding-top: 1rem;
-    padding-left: 1rem;
-    margin-left: 4rem;
-    margin-left: 2rem;
+    color: white; /* Sets text color to white */
+    background-color: rgba(
+      168,
+      84,
+      84,
+      0.593
+    ); /* Sets a semi-transparent red background */
+    border-radius: 0.45rem; /* Rounds the corners */
+    width: 40vw; /* Sets width to 40% of viewport width */
+    height: 5vh; /* Sets height to 5% of viewport height */
+    padding-top: 1rem; /* Adds padding at the top */
+    padding-left: 1rem; /* Adds padding to the left */
+    margin-left: 4rem; /* Adds left margin for spacing */
+    margin-left: 2rem; /* This line overrides the previous one; consider removing one */
   }
 
   .betrave {
-    width: 40vw;
-    height: 100%;
+    width: 40vw; /* Sets width to 40% of viewport width */
+    height: 100%; /* Sets height to 100% of the parent element */
   }
 
   .nect {
-    text-decoration: underline;
-    padding-right: 9rem;
-    margin-top: 3rem;
-    margin-bottom: 3rem;
-    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: underline; /* Underlines the text */
+    padding-right: 9rem; /* Adds padding to the right */
+    margin-top: 3rem; /* Adds top margin for spacing */
+    margin-bottom: 3rem; /* Adds bottom margin for spacing */
+    font-family: Arial, Helvetica, sans-serif; /* Sets font family */
   }
 }
 
+/* Media query for larger screens (min-width: 720px) */
 @media screen and (min-width: 720px) {
   .form-container {
-    display: flex;
-    flex-direction: row;
-    background-image: none;
+    display: flex; /* Enables flexbox layout */
+    flex-direction: row; /* Aligns items in a row */
+    background-image: none; /* Removes the background image */
   }
+
   .chickenC {
-    width: 60vw;
-    height: 118vh;
-    display: inline;
-    margin-bottom: -5rem;
-    margin-left: -10rem;
+    width: 60vw; /* Sets width to 60% of viewport width */
+    height: 118vh; /* Sets height to 118% of viewport height (may need adjustment) */
+    display: inline; /* Changes display to inline */
+    margin-bottom: -5rem; /* Negative margin to pull element upwards */
+    margin-left: -10rem; /* Negative margin to pull element to the left */
   }
+
   .form-group1 {
-    display: flex;
-    justify-content: flex-start;
-    margin-top: 6rem;
-    margin-bottom: 4rem;
+    display: flex; /* Enables flexbox layout */
+    justify-content: flex-start; /* Aligns items to the start */
+    margin-top: 6rem; /* Adds top margin for spacing */
+    margin-bottom: 4rem; /* Adds bottom margin for spacing */
   }
+
   .the-input {
-    width: 23vw;
-    height: 4vh;
-    background-color: rgba(128, 128, 128, 0.32);
-    border-radius: 0.45rem;
+    width: 23vw; /* Sets width to 23% of viewport width */
+    height: 4vh; /* Sets height to 4% of viewport height */
+    background-color: rgba(
+      128,
+      128,
+      128,
+      0.32
+    ); /* Sets a lighter gray background */
+    border-radius: 0.45rem; /* Rounds the corners of the input */
   }
+
   .the-label {
-    background-color: transparent;
-    color: black;
-    font-size: 1rem;
-    display: flex;
-    justify-content: flex-start;
+    background-color: transparent; /* Makes the background transparent */
+    color: black; /* Sets text color to black */
+    font-size: 1rem; /* Sets a smaller font size */
+    display: flex; /* Enables flexbox layout */
+    justify-content: flex-start; /* Aligns text to the left */
   }
+
   .validate {
-    font-size: 1rem;
+    font-size: 1rem; /* Sets font size for validation buttons */
   }
+
   .create {
-    background-color: rgba(255, 0, 0, 0.223);
-    border-radius: 0.45rem;
+    background-color: rgba(
+      255,
+      0,
+      0,
+      0.223
+    ); /* Sets a semi-transparent red background */
+    border-radius: 0.45rem; /* Rounds the corners */
   }
+
   .count {
-    color: black;
-    background-color: rgba(255, 0, 0, 0.299);
-    border-radius: 0.45rem;
-    width: 22vw;
-    height: 4vh;
-    padding-top: 1rem;
-    padding-left: 1rem;
+    color: black; /* Sets text color to black */
+    background-color: rgba(
+      255,
+      0,
+      0,
+      0.299
+    ); /* Sets a semi-transparent red background */
+    border-radius: 0.45rem; /* Rounds the corners */
+    width: 22vw; /* Sets width to 22% of viewport width */
+    height: 4vh; /* Sets height to 4% of viewport height */
+    padding-top: 1rem; /* Adds padding at the top */
+    padding-left: 1rem; /* Adds padding to the left */
   }
+
   .nect {
-    text-decoration: underline;
-    padding-right: 13rem;
-    margin-top: 3rem;
-    margin-bottom: 3rem;
-    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: underline; /* Underlines the text */
+    padding-right: 13rem; /* Adds padding to the right */
+    margin-top: 3rem; /* Adds top margin for spacing */
+    margin-bottom: 3rem; /* Adds bottom margin for spacing */
+    font-family: Arial, Helvetica, sans-serif; /* Sets font family */
   }
 }

@@ -1,126 +1,144 @@
+/* Styling for the first menu title with a blue circle before the text */
 .menus-titles1::before {
-  content: "";
-  display: inline-block;
-  width: 15px;
-  height: 15px;
-  border: 5px solid #0081c8;
-  border-radius: 50%;
-  background-color: transparent;
-  margin-right: 10px;
-}
-.menus-titles2::before {
-  content: "";
-  display: inline-block;
-  width: 15px;
-  height: 15px;
-  border: 5px solid black;
-  border-radius: 50%;
-  background-color: transparent;
-  margin-right: 10px;
-}
-.menus-titles3::before {
-  content: "";
-  display: inline-block;
-  width: 15px;
-  height: 15px;
-  border: 5px solid red;
-  border-radius: 50%;
-  background-color: transparent;
-  margin-right: 10px;
-}
-.menus-titles4::before {
-  content: "";
-  display: inline-block;
-  width: 15px;
-  height: 15px;
-  border: 5px solid rgb(193, 160, 30);
-  border-radius: 50%;
-  background-color: transparent;
-  margin-right: 10px;
-}
-.menus-titles5::before {
-  content: "";
-  display: inline-block;
-  width: 15px;
-  height: 15px;
-  border: 5px solid green;
-  border-radius: 50%;
-  background-color: transparent;
-  margin-right: 10px;
+  content: ""; /* Generate an empty content before the element */
+  display: inline-block; /* Set to inline-block to allow width and height */
+  width: 15px; /* Set width of the circle */
+  height: 15px; /* Set height of the circle */
+  border: 5px solid #0081c8; /* Set a blue border color for the circle */
+  border-radius: 50%; /* Make the border circular */
+  background-color: transparent; /* Set background color to transparent */
+  margin-right: 10px; /* Add space between the circle and the text */
 }
 
+/* Styling for the second menu title with a black circle before the text */
+.menus-titles2::before {
+  content: ""; /* Generate an empty content before the element */
+  display: inline-block; /* Set to inline-block to allow width and height */
+  width: 15px; /* Set width of the circle */
+  height: 15px; /* Set height of the circle */
+  border: 5px solid black; /* Set a black border color for the circle */
+  border-radius: 50%; /* Make the border circular */
+  background-color: transparent; /* Set background color to transparent */
+  margin-right: 10px; /* Add space between the circle and the text */
+}
+
+/* Styling for the third menu title with a red circle before the text */
+.menus-titles3::before {
+  content: ""; /* Generate an empty content before the element */
+  display: inline-block; /* Set to inline-block to allow width and height */
+  width: 15px; /* Set width of the circle */
+  height: 15px; /* Set height of the circle */
+  border: 5px solid red; /* Set a red border color for the circle */
+  border-radius: 50%; /* Make the border circular */
+  background-color: transparent; /* Set background color to transparent */
+  margin-right: 10px; /* Add space between the circle and the text */
+}
+
+/* Styling for the fourth menu title with a gold circle before the text */
+.menus-titles4::before {
+  content: ""; /* Generate an empty content before the element */
+  display: inline-block; /* Set to inline-block to allow width and height */
+  width: 15px; /* Set width of the circle */
+  height: 15px; /* Set height of the circle */
+  border: 5px solid rgb(193, 160, 30); /* Set a gold border color for the circle */
+  border-radius: 50%; /* Make the border circular */
+  background-color: transparent; /* Set background color to transparent */
+  margin-right: 10px; /* Add space between the circle and the text */
+}
+
+/* Styling for the fifth menu title with a green circle before the text */
+.menus-titles5::before {
+  content: ""; /* Generate an empty content before the element */
+  display: inline-block; /* Set to inline-block to allow width and height */
+  width: 15px; /* Set width of the circle */
+  height: 15px; /* Set height of the circle */
+  border: 5px solid green; /* Set a green border color for the circle */
+  border-radius: 50%; /* Make the border circular */
+  background-color: transparent; /* Set background color to transparent */
+  margin-right: 10px; /* Add space between the circle and the text */
+}
+
+/* Common font size for all menu titles */
 .menus-titles1,
 .menus-titles2,
 .menus-titles3,
 .menus-titles4,
 .menus-titles5 {
-  font-size: 20px;
+  font-size: 20px; /* Set font size for menu titles */
 }
 
+/* Container styling for the list of menus */
 .listMenus {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-content: flex-start;
-  justify-content: space-evenly;
-  align-items: flex-start;
-  padding: 0;
-  margin: 0;
+  display: flex; /* Use flexbox for layout */
+  flex-direction: column; /* Stack children in a column */
+  flex-wrap: wrap; /* Allow wrapping of children */
+  align-content: flex-start; /* Align items at the start of the container */
+  justify-content: space-evenly; /* Distribute space evenly between items */
+  align-items: flex-start; /* Align items to the start of the flex container */
+  padding: 0; /* Remove padding */
+  margin: 0; /* Remove margin */
 }
 
+/* Styling for favored items container */
 .favorisé {
-  display: flex;
-  justify-content: center;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+  display: flex; /* Use flexbox for layout */
+  justify-content: center; /* Center the content horizontally */
+  margin-top: 2rem; /* Add top margin */
+  margin-bottom: 2rem; /* Add bottom margin */
 }
 
+/* Styling for the favor section */
 .favor {
-  display: flex;
-  margin-left: 5rem;
-  flex-direction: row;
-  margin-bottom: 5rem;
+  display: flex; /* Use flexbox for layout */
+  margin-left: 5rem; /* Add left margin */
+  flex-direction: row; /* Arrange children in a row */
+  margin-bottom: 5rem; /* Add bottom margin */
 }
 
+/* Styling for the menu list container */
 .menuList {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-content: flex-start;
-  justify-content: space-evenly;
-  align-items: flex-start;
+  display: flex; /* Use flexbox for layout */
+  flex-direction: column; /* Stack children in a column */
+  flex-wrap: wrap; /* Allow wrapping of children */
+  align-content: flex-start; /* Align items at the start of the container */
+  justify-content: space-evenly; /* Distribute space evenly between items */
+  align-items: flex-start; /* Align items to the start of the flex container */
 }
 
+/* Styling for details text */
 .détail {
-  font-size: 15px;
-  margin-left: 5rem;
+  font-size: 15px; /* Set font size for details text */
+  margin-left: 5rem; /* Add left margin */
 }
 
+/* Styling for the épiceries (grocery) section */
 .épiceries {
-  border-radius: 2rem;
-  width: 70vw;
-  height: 50vw;
-  align-self: center;
+  border-radius: 2rem; /* Round the corners of the element */
+  width: 70vw; /* Set width to 70% of the viewport width */
+  height: 50vw; /* Set height to 50% of the viewport width */
+  align-self: center; /* Center the element in the flex container */
 }
 
+/* Media query for screens with a maximum width of 520px */
 @media only screen and (max-width: 520px) {
   .favorisé {
-    display: flex;
-    justify-content: center;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center the content horizontally */
+    margin-top: 2rem; /* Add top margin */
+    margin-bottom: 2rem; /* Add bottom margin */
   }
 
   .épiceries {
-    width: 80vw;
-    height: 60vw;
-    align-self: center;
-    margin-top: 2rem;
+    width: 80vw; /* Set width to 80% of the viewport width for smaller screens */
+    height: 60vw; /* Set height to 60% of the viewport width for smaller screens */
+    align-self: center; /* Center the element in the flex container */
+    margin-top: 2rem; /* Add top margin */
   }
 }
 
+/* Media query for screens with a minimum width of 720px */
 @media screen and (min-width: 720px) {
   .favor {
-    margin-left: 20rem;
+    margin-left: 20rem; /* Add left margin for larger screens */
   }
 }

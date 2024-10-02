@@ -1,56 +1,61 @@
 .continents {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  display: flex; /* Enables flexbox layout for the continents section */
+  flex-direction: column; /* Arranges child elements in a column */
+  align-items: center; /* Centers child elements horizontally */
 }
 
 .welcome-container {
-  position: relative;
-  display: inline-block;
-  text-align: center;
-  margin: 1rem;
+  position: relative; /* Positions the container relative to its normal position */
+  display: inline-block; /* Allows the container to wrap around its contents */
+  text-align: center; /* Centers the text inside the container */
+  margin: 1rem; /* Adds a margin around the container */
 }
 
 .welcome {
-  width: 70%;
-  border: 2px solid #242423;
-  border-radius: 5vw;
-  margin-bottom: 20px;
-  margin-top: 20px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+  width: 70%; /* Sets the width of the welcome section to 70% of its parent */
+  border: 2px solid #242423; /* Adds a solid border with specified color */
+  border-radius: 5vw; /* Rounds the corners of the border */
+  margin-bottom: 20px; /* Adds space below the welcome section */
+  margin-top: 20px; /* Adds space above the welcome section */
+  display: block; /* Changes display type to block */
+  margin-left: auto; /* Centers the section horizontally */
+  margin-right: auto; /* Centers the section horizontally */
 }
 
 .welcome-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: black;
-  font-size: 4.6vw;
-  width: 50%;
-  padding: 10px;
-  background-color: rgb(255, 255, 255, 0.7);
-  text-align: center;
-  border-radius: 50px;
+  position: absolute; /* Positions the text absolutely within the welcome container */
+  top: 50%; /* Vertically centers the text */
+  left: 50%; /* Horizontally centers the text */
+  transform: translate(-50%, -50%); /* Adjusts position to center text */
+  color: black; /* Sets the text color to black */
+  font-size: 4.6vw; /* Sets the font size relative to viewport width */
+  width: 50%; /* Sets the width of the text container */
+  padding: 10px; /* Adds padding inside the text container */
+  background-color: rgb(
+    255,
+    255,
+    255,
+    0.7
+  ); /* Sets a white background with some transparency */
+  text-align: center; /* Centers the text inside the container */
+  border-radius: 50px; /* Rounds the corners of the text background */
 }
 
 .new-menus {
-  font-size: 2.5vw;
-  margin: 1rem;
+  font-size: 2.5vw; /* Sets the font size relative to viewport width for new menus */
+  margin: 1rem; /* Adds a margin around the new menus */
 }
 
 .continents1,
 .continents2 {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 0;
+  display: flex; /* Enables flexbox layout for these sections */
+  justify-content: center; /* Centers child elements horizontally */
+  margin-bottom: 0; /* Removes bottom margin */
 }
 
 .continents1 div,
 .continents2 div {
-  margin: 0 5px;
+  margin: 0 5px; /* Adds horizontal margin between continent divs */
 }
 
 .europe,
@@ -58,120 +63,128 @@
 .amerique,
 .asie,
 .oceanie {
-  border-radius: 50%;
+  border-radius: 50%; /* Makes these elements circular */
 }
 
 .cercles {
-  margin: 25px;
+  margin: 25px; /* Adds a margin around the circles */
 }
 
 .image-container.disabled {
-  opacity: 0.5;
-  pointer-events: none;
+  opacity: 0.5; /* Reduces the opacity to make the container look disabled */
+  pointer-events: none; /* Disables mouse events for this container */
 }
 
 .image-container.disabled img {
-  filter: grayscale(100%);
+  filter: grayscale(
+    100%
+  ); /* Applies grayscale filter to images inside disabled container */
 }
 
-/* Effet de zoom au survol des images */
+/* Zoom effect on image hover */
 .image-container img {
-  transition: transform 0.3s ease-in-out; /* Transition fluide pour l'effet */
+  transition: transform 0.3s ease-in-out; /* Smooth transition for the zoom effect */
 }
 
 .image-container:hover img {
-  transform: scale(1.1); /* Agrandit légèrement l'image lors du survol */
+  transform: scale(1.1); /* Slightly enlarges the image on hover */
 }
 
 @media only screen and (max-width: 720px) {
   .welcome {
-    width: 90%;
-    border-radius: 8vw;
+    width: 90%; /* Sets the width of the welcome section to 90% on small screens */
+    border-radius: 8vw; /* Adjusts border radius for small screens */
   }
 
   .welcome-text {
-    font-size: 6vw; /* Augmente la taille de la police sur les petits écrans */
-    width: 80%;
+    font-size: 6vw; /* Increases font size on small screens */
+    width: 80%; /* Sets the width of the text container on small screens */
   }
 
   .continents2 {
-    margin-top: 1rem;
+    margin-top: 1rem; /* Adds margin above continents2 on small screens */
   }
+
   .europe,
   .afrique,
   .amerique,
   .asie,
   .oceanie {
-    width: 25vw;
-    height: 25vw;
+    width: 25vw; /* Sets width of continents to 25vw on small screens */
+    height: 25vw; /* Sets height of continents to 25vw on small screens */
   }
 
   .europe {
-    border: 2vw solid #0081c8;
-    width: 7rem;
-    height: 7rem;
+    border: 2vw solid #0081c8; /* Sets border for Europe */
+    width: 7rem; /* Sets fixed width for Europe */
+    height: 7rem; /* Sets fixed height for Europe */
   }
 
   .afrique {
-    border: 2vw solid #242423;
-    width: 7rem;
-    height: 7rem;
+    border: 2vw solid #242423; /* Sets border for Africa */
+    width: 7rem; /* Sets fixed width for Africa */
+    height: 7rem; /* Sets fixed height for Africa */
   }
 
   .amerique {
-    border: 2vw solid #ee334e;
-    width: 7rem;
-    height: 7rem;
+    border: 2vw solid #ee334e; /* Sets border for America */
+    width: 7rem; /* Sets fixed width for America */
+    height: 7rem; /* Sets fixed height for America */
   }
 
   .asie {
-    border: 2vw solid #e9c46a;
-    width: 7rem;
-    height: 7rem;
+    border: 2vw solid #e9c46a; /* Sets border for Asia */
+    width: 7rem; /* Sets fixed width for Asia */
+    height: 7rem; /* Sets fixed height for Asia */
   }
 
   .oceanie {
-    border: 2vw solid #00a651;
-    width: 7rem;
-    height: 7rem;
+    border: 2vw solid #00a651; /* Sets border for Oceania */
+    width: 7rem; /* Sets fixed width for Oceania */
+    height: 7rem; /* Sets fixed height for Oceania */
   }
 
   .image-container {
-    position: relative;
-    display: inline-block;
+    position: relative; /* Sets position relative for image container */
+    display: inline-block; /* Allows the container to wrap around its contents */
   }
 
   .image-container img {
-    display: block;
+    display: block; /* Displays the image as a block element */
   }
 
   .image-container h2 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    margin: 0;
-    padding: 5px;
-    color: white;
-    font-size: 4vw;
-    width: 75%;
-    background-color: rgba(168, 84, 84, 0.693);
-    text-align: center;
-    border-radius: 50px;
+    position: absolute; /* Positions the title absolutely within the container */
+    top: 50%; /* Vertically centers the title */
+    left: 50%; /* Horizontally centers the title */
+    transform: translate(-50%, -50%); /* Adjusts position to center title */
+    margin: 0; /* Resets margin for the title */
+    padding: 5px; /* Adds padding inside the title */
+    color: white; /* Sets title color to white */
+    font-size: 4vw; /* Sets font size relative to viewport width */
+    width: 75%; /* Sets width of the title container */
+    background-color: rgba(
+      168,
+      84,
+      84,
+      0.693
+    ); /* Sets background color with transparency for title */
+    text-align: center; /* Centers the title text */
+    border-radius: 50px; /* Rounds the corners of the title background */
   }
 
   .image-container h2 a {
-    color: inherit;
-    text-decoration: none;
+    color: inherit; /* Inherits color from the title */
+    text-decoration: none; /* Removes underline from links */
   }
 
   .new-menus {
-    font-size: 1.25rem;
-    margin: 1rem;
+    font-size: 1.25rem; /* Sets font size for new menus */
+    margin: 1rem; /* Adds margin around new menus */
   }
 
   .welcome-text {
-    font-size: 1.25rem;
+    font-size: 1.25rem; /* Sets font size for welcome text on small screens */
   }
 }
 
@@ -181,56 +194,61 @@
   .amerique,
   .asie,
   .oceanie {
-    width: 20vw;
-    height: 20vw;
+    width: 20vw; /* Sets width of continents to 20vw on larger screens */
+    height: 20vw; /* Sets height of continents to 20vw on larger screens */
   }
 
   .europe {
-    border: 0.6vw solid #0081c8;
+    border: 0.6vw solid #0081c8; /* Sets border for Europe on larger screens */
   }
 
   .afrique {
-    border: 0.6vw solid #242423;
+    border: 0.6vw solid #242423; /* Sets border for Africa on larger screens */
   }
 
   .amerique {
-    border: 0.6vw solid #ee334e;
+    border: 0.6vw solid #ee334e; /* Sets border for America on larger screens */
   }
 
   .asie {
-    border: 0.6vw solid #e9c46a;
+    border: 0.6vw solid #e9c46a; /* Sets border for Asia on larger screens */
   }
 
   .oceanie {
-    border: 0.6vw solid #00a651;
+    border: 0.6vw solid #00a651; /* Sets border for Oceania on larger screens */
   }
 
   .image-container {
-    position: relative;
-    display: inline-block;
+    position: relative; /* Sets position relative for image container */
+    display: inline-block; /* Allows the container to wrap around its contents */
   }
 
   .image-container img {
-    display: block;
+    display: block; /* Displays the image as a block element */
   }
 
   .image-container h2 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    margin: 0;
-    padding: 5px;
-    color: black;
-    font-size: 3vw;
-    width: 85%;
-    background-color: rgba(255, 255, 255, 0.7);
-    text-align: center;
-    border-radius: 50px;
+    position: absolute; /* Positions the title absolutely within the container */
+    top: 50%; /* Vertically centers the title */
+    left: 50%; /* Horizontally centers the title */
+    transform: translate(-50%, -50%); /* Adjusts position to center title */
+    margin: 0; /* Resets margin for the title */
+    padding: 5px; /* Adds padding inside the title */
+    color: black; /* Sets title color to black */
+    font-size: 3vw; /* Sets font size relative to viewport width */
+    width: 85%; /* Sets width of the title container */
+    background-color: rgba(
+      255,
+      255,
+      255,
+      0.7
+    ); /* Sets background color with transparency for title */
+    text-align: center; /* Centers the title text */
+    border-radius: 50px; /* Rounds the corners of the title background */
   }
 
   .image-container h2 a {
-    color: inherit;
-    text-decoration: none;
+    color: inherit; /* Inherits color from the title */
+    text-decoration: none; /* Removes underline from links */
   }
 }
