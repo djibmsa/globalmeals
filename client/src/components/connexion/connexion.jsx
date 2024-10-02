@@ -71,7 +71,6 @@ function Login() {
         />
       </div>
       <form onSubmit={handleLogin}>
-        <h1 className="meal">GLOBAL MEALS</h1>
         <h2 className="nect">Connexion</h2>
         <div className="form-group1">
           <label htmlFor="mail" className="the-label">

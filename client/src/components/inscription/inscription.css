@@ -14,7 +14,7 @@
   color: black; /* Correction de 'balck' à 'black' */
   padding: 0.3rem;
   border-radius: 0.5rem;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
 }
 
 .formOne,
@@ -71,11 +71,6 @@ p {
 .betrave {
   display: none; /* L'image à gauche sera visible en version desktop uniquement */
   margin-left: -5rem;
-}
-
-.meal2 {
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-  margin-left: 4rem;
 }
 .create-count {
   text-decoration: underline;
@@ -194,11 +189,6 @@ p {
 
   .validate2 {
     font-size: 1rem;
-  }
-
-  .meal2 {
-    font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-    margin-left: 5rem;
   }
 
   .create-count {

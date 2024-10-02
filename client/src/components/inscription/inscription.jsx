@@ -59,7 +59,6 @@ function Register() {
         />
       </div>
       <form onSubmit={handleSubmitForm}>
-        <h1 className="meal2">GLOBAL MEALS</h1>
         <h2 className="create-count">Créer un compte</h2>
 
         <div className="formOne">
